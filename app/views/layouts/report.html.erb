@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css" media="screen">
+      @media print {
+        @page { margin: 0; }
+        body { margin: 1.6cm; }
+      }  
+    </style>
+    <title>Report Generation</title>
+    <%= csrf_meta_tags %>
+    <% if @current_user %>
+      <%= link_to "Log out", logout_path, method: :delete %>
+    <% end %>
+    <%= stylesheet_link_tag    'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag 'reports', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      $(function(){
+        var $addDetail = $('#add-detail'),
+          $removeDetail = $('#remove-detail'),
+          $detailContainer = $('#company_details_wrapper'),
+          $detail = $('.company_details').clone();
+
+        $addDetail.click(function() {
+          $detailContainer.append($detail.clone());
+        });
+
+        $removeDetail.click(function(){
+          if($('.company_details').length > 1){
+            $('.company_details').last().remove();
+          }
+        })
+
+        var $addItem = $('#add-item'),
+          $removeItem = $('#remove-item'),
+          $itemContainer = $('#item-container'),
+          $item = $('.item-row').clone();
+
+        $addItem.click(function() {
+          $itemContainer.append($item.clone());
+        });
+
+        $removeItem.click(function(){
+          if($('.item-row').length > 1){
+            $('.item-row').last().remove();
+          }
+        })
+        var $addTerm = $('#add-term'),
+          $removeTerm = $('#remove-term'),
+          $term = $('.term-row').clone();
+
+        $addTerm.click(function() {
+          $term.clone().insertBefore( $addTerm );
+        });
+
+        $removeTerm.click(function(){
+          if($('.term-row').length > 1){
+            $('.term-row').last().remove();
+          }
+        });
+
+        function getFormData(){
+          data = {}
+          data.items = []
+          $('.item-row').each(function(){
+            var a = $(this).find('input,select');
+            var temp = {};
+            if(a[0].value == '' || a[1].value == '' || a[2].value == '' || a[3].value == ''){
+              return true;
+            }
+            for(var i = 0; i < a.length; i++){
+              temp[a[i].name] = a[i].value;
+            }
+            data.items.push(temp);
+          })
+          data.terms = []
+          $('.term-row input').each(function(){
+            data.terms.push($(this)[0].value);
+          });
+          data.details = []
+          $('.company_details input').each(function(){
+            data.details.push($(this)[0].value);
+          });
+          return data;
+        }
+        $('#create-quotation').click(function(){
+          var data = getFormData();
+          window.open("/reports/show?"+data, "_blank");
+        })
+      })
+    </script>
+  </body>
+</html>

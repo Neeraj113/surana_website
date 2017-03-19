@@ -1,0 +1,60 @@
+<% @page_title = "Report Generation" %>
+<div class="Login_Form container">
+    <h1>Generate Report</h1>
+    <% if flash[:alert] %>
+    <div id="alert">
+    <%= flash[:alert] %> 
+    </div>
+    <% end %>
+    <form id="quotation-rows">
+        <h5>Add Company Details</h5>
+        <div id="company_details_wrapper">
+            <div class="company_details">
+                <input type="text" name="company_name" width="200" placeholder="Company Details" />
+            </div>
+        </div>
+        <input class="btn btn-default" type="button" id="add-detail" name="add-detail" value="Add Detail" />
+        <input class="btn btn-default" type="button" id="remove-detail" name="remove-detail" value="Remove Detail" />
+        <table class="table">
+            <thead>
+                <tr>
+                <th>Item Description</th>
+                <th>Quantity</th>
+                <th>Unit Measurement</th>
+                <th>Unit Price</th>
+                </tr>
+            </thead>
+            <tbody id="item-container">
+                <tr class="item-row">
+                    <td>
+                        <input type="text" name="comment" placeholder="Item Description" />
+                    </td>
+                    <td>
+                        <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required />
+                    </td>
+                    <td>
+                        <select name="unit_measurement" required placeholder="Unit Of Measurement">
+                            <option value="Nos">No</option>
+                            <option value="Box">Box</option>
+                            <option value="Feet">Feet</option>
+                            <option value="Kg">Kg</option>
+                        </select>
+                    </td>
+                    <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required /></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input class="btn btn-default" type="button" id="add-item" name="add-item" value="Add Item" />
+        <input class="btn btn-default" type="button" id="remove-item" name="remove-item" value="Remove Item" />
+        <hr>
+        <div class="term-row clearfix form-group">
+            <input class="input-sm form-control" type="text" name="term" placeholder="Terms & Conditions" />
+        </div>
+        <input class="btn btn-default" type="button" id="add-term" name="add-term" value="Add Term" />
+        <input class="btn btn-default" type="button" id="remove-term" name="remove-term" value="Remove Term" />
+        <br>
+        <hr>
+        <input type="button" id="create-quotation" name="create-quotation" value="Create Quotation">
+    </form>​
+</div>

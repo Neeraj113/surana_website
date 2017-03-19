@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang=en class=no-js>
+
+<head>
+    <%= display_meta_tags %>
+    <meta charset=utf-8 />
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name=author content="Surana Sanitations" />
+    <!--[if IE]><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><![endif]-->
+    <% if @category_name %>
+        <title><%= @category_name %> | Surana Sanitations</title>
+    <% else %>
+        <title>Surana Sanitations | Tiles, Sanitaryware, Pipes, Bathroom Fittings</title>
+    <% end %>
+    <link rel="author" href="https://plus.google.com/+SuranaSanitations" title="Surana Sanitations" />
+    <meta name=google content="notranslate" />
+    <meta name=robots content="index, follow" />
+    <link href=/assets/logo.png type=image/png rel='apple-touch-icon' />
+    <link rel=icon href=/assets/favicon_16.png type=image/png sizes="16x16" />
+    <link rel=icon href=/assets/favicon_32.png type=image/png sizes="32x32" />
+    <link rel=canonical href="<%= url_for(:only_path => false) %>" />
+    <meta name="twitter:site" content="@suranasanitary">
+    <meta property=og:url content="http://ssbathstudio.com/bathroom-accessories.html" />
+    <meta name="twitter:creator" content="@suranasanitary">
+    <meta name="web_author" content="Neeraj Surana">
+    <meta name=twitter:url content="http://ssbathstudio.com/bathroom-accessories.html" />
+    <meta itemprop=name content="@category_name | Dealers | Surana Sanitations | Visakhapatnam" />
+    <meta property=og:title content="@category_name | Dealers | Surana Sanitations | Visakhapatnam" />
+    <meta name=twitter:title content="@category_name | Dealers | Surana Sanitations | Visakhapatnam" />
+    <meta itemprop=description content="Jaquar, Prayag, Bathking, Xen, Seiko, Bright(Lion,BSP,Amar) Brands | Bathroom Accessories | Surana Sanitations| Visakhapatnam" />
+    <meta name=description content="Jaquar, Prayag, Bathking, Xen, Seiko, Bright(Lion,BSP,Amar) Brands | Bathroom Accessories | Surana Sanitations| Visakhapatnam" />
+    <meta property=og:description content="Jaquar, Prayag, Bathking, Xen, Seiko, Bright(Lion,BSP,Amar) Brands | Bathroom Accessories | Surana Sanitations| Visakhapatnam" />
+    <meta name="revisit-after" content="7 days">
+    <meta name=twitter:description content="Jaquar, Prayag, Bathking, Xen, Seiko, Bright(Lion,BSP,Amar) Brands | Bathroom Accessories | Surana Sanitations| Visakhapatnam" />
+    <meta itemprop=image content="http://ssbathstudio.com/assets/logo.png" />
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="reply-to" content="&#x73;&#x75;&#x72;&#x61;&#x6E;&#x61;&#x73;&#x61;&#x6E;&#x69;&#x74;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;">
+    <meta name="googlebot" content="index, follow">
+    <meta name="abstract" content="House of Tiles, Sanitaryware & Bathroom Fittings">
+    <meta name="language" content="english">
+    <meta property=og:image content="http://ssbathstudio.com/assets/logo.png" />
+    <meta name=twitter:image:src content="http://ssbathstudio.com/assets/logo.png" />
+    <meta property=og:type content="Product" />
+    <meta property=og:site_name content="Surana Sanitations" />
+    <meta name=twitter:card content="Summary" />
+    <meta name=twitter:domain content="http://ssbathstudio.com/bathroom-accessories.html" />
+    <meta itemprop=keywords content="sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings" /> 
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body data-spy=scroll data-target=#menu-section>
+    <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id=menu-section>
+        <div class=container>
+            <div class=navbar-header>
+                <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse><span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button><a class=navbar-brand href=/>Surana Sanitations</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li itemscope itemtype=http://schema.org/Store><a class=sections href=/#home itemprop=url>HOME</a></li>
+                    <li><a class=sections href=/#brands>BRANDS</a></li>
+                    <li><a class=sections href=/#products>PRODUCTS</a></li>
+                    <li><a class=sections href=/#contact>CONTACT</a></li>
+                    <li><a class=sections href=about-us>ABOUT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <%= yield %>
+    <nav id="footer">
+        <div class="container">
+            <div class="pull-left fnav">
+                <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016-2017.</div>
+            <div class="pull-right fnav">
+                <ul class="footer-social" itemscope itemtype="http://schema.org/Store">
+                    <li>
+                        <a href=http://www.indiamart.com/surana-sanitations itemprop="sameAs" target=_blank><img class="logo" src=/assets/indiamart.png alt="IndiaMart Member Logo"></a>
+                    </li>
+                    <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
+                    <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                    <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a href="https://twitter.com/suranasanitary" itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="controls">
+        <ul>
+            <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
+            <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href=https://twitter.com/suranasanitary itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
+            <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+    </div>
+    <%= javascript_include_tag 'categories', 'data-turbolinks-track': 'reload' %>
+    
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl=en&render=explicit" async defer></script>
+    <script>
+        function onloadCallback(){
+            if($('#captcha').length){
+                $('#captcha').html('');
+                grecaptcha.render('captcha', {
+                  'sitekey' : '6Lf1YyQTAAAAACx8qgdU_7HkZga7g__8dxwC6C_9',
+                  'expired-callback': function () {
+                    grecaptcha.reset();
+                  }
+                });
+            }
+        }
+        if (document.location.hostname.search("ssbathstudio") !== -1) {
+            (function(d, e, j, h, f, c, b) {
+                d.GoogleAnalyticsObject = f;
+                d[f] = d[f] || function() {
+                    (d[f].q = d[f].q || []).push(arguments)
+                }, d[f].l = 1 * new Date();
+                c = e.createElement(j), b = e.getElementsByTagName(j)[0];
+                c.async = 1;
+                c.src = h;
+                b.parentNode.insertBefore(c, b)
+            })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+            ga("create", "UA-79751485-1", "auto");
+            ga("send", "pageview");
+        }
+    </script>
+    <script>
+        function initialize() {
+            var f = document.getElementById("map-canvas");
+            if(f){
+                var b = {
+                    center: new google.maps.LatLng(17.712446, 83.29975),
+                    zoom: 16,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var e = new google.maps.Map(f, b);
+                var d = new google.maps.InfoWindow();
+                var a, c;
+                a = new google.maps.Marker({
+                    position: new google.maps.LatLng(17.712446, 83.29975),
+                    map: e
+                });
+                d.setContent('<div style="overflow: auto;"><strong>Surana Sanitations</strong><br>28-9-32, Suryabagh, Vizag<br><a style="color:#427fed;" href="https://www.google.com/maps/place/Surana+Sanitations/@17.712494,83.2976383,17z/data=!3m1!4b1!4m5!3m4!1s0x3a3969b1dfffbd55:0xefa68cd712aedf8c!8m2!3d17.712494!4d83.299827" target="_blank">View on Google Maps</a></div>');
+                d.open(e, a);
+                google.maps.event.addListenerOnce(a, "click", (function(g, h) {
+                    return function() {
+                        d.open(e, g)
+                    }
+                })(a, c))
+            }
+        }
+
+        if(window.google){
+          initialize();
+        } else{
+          $.ajax('https://maps.googleapis.com/maps/api/js?callback=initialize&hl=en&render=explicit', {
+            crossDomain: true,
+            'data-turbolinks-eval' : false,
+            dataType: 'script'
+          });
+        }
+    </script>
+    </body>
+</html>

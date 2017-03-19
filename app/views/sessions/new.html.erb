@@ -1,0 +1,19 @@
+<% @page_title = "UserAuth | Login" %>
+<div class="Login_Form">
+  <h1>Login</h1>
+  <% if flash[:alert] %>
+    <div id="alert">
+    <%= flash[:alert] %> 
+    </div>
+  <% end %>
+  <%= form_for(:session, :url => {:controller => 'sessions', :action => 'create'}) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.submit "Log in", class: "btn btn-primary" %>
+  <% end %>
+  <p>New user? <%= link_to "Sign up now!", signup_path_url %></p>
+</div>

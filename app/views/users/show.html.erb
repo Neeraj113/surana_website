@@ -1,0 +1,15 @@
+<% @page_title = "Welcome" + @user.username %>
+<div class="User_Form">
+  <h1>Welcome <%= @user.username %></h1>
+  <% if flash[:alert] %>
+    <div id="alert">
+       <%= flash[:alert] %> 
+    </div>
+  <% end %>
+  <div>
+    These are the details we have about you! :)
+  </div>
+  <div>Name: <b><%= @user.username %></b></div>
+  <div>Email: <b><%= @user.email %></b></div>
+  <div>Access: <b><%= @user.has_permit ? 'Granted :)' : 'Denied :(' %></b></div>
+</div>
