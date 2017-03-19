@@ -229,7 +229,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def contact
-		response = verify_google_recptcha(Rails.application.secrets.recaptcha_secret_key,params[:captcha])
+		response = verify_google_recptcha(APP_CONFIG['recaptcha_secret_key'],params[:captcha])
 		IntroductionMailer.contact_form(params).deliver
 		if response["success"]
 			IntroductionMailer.introduction_email(params).deliver
