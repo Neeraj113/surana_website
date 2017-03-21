@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 	require 'digest/sha1'
+	before_filter :set_current_user, :only => [:index, :create, :show]
 
 	def index
 		@users = User.all
@@ -33,5 +34,9 @@ class UsersController < ApplicationController
 
 	def user_params
 		params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password, :password_confirmation)
+	end
+
+	def set_current_user
+		current_user
 	end
 end

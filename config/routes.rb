@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # Category Pages Route
-  get '/'                           => 'categories#index'
+  root :to                          => "categories#index"
   get '/about-us'                   => 'categories#about_us'
   get '/bathroom-accessories'    		=> 'categories#bathroom_accessories'
   get '/bathroom-fittings' 			    => 'categories#bathroom_fittings'
