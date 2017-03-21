@@ -2,25 +2,41 @@
 <div class="Login_Form container">
     <h1>Generate Report</h1>
     <% if flash[:alert] %>
-    <div id="alert">
-    <%= flash[:alert] %> 
-    </div>
+        <div id="alert">
+            <%= flash[:alert] %> 
+        </div>
     <% end %>
     <form id="quotation-rows">
         <h5>Add Company Details</h5>
+        <div>
+            <label for="quotation">Quotation:</label>
+            <input type="text" name="quotation" id="quotation">
+        </div>
+        <br>
+        <div>
+            <label for="project_site">Project Site:</label>
+            <input type="text" name="project_site" id="project_site">
+        </div>
+        <br>
+        <div>
+            <label for="reference">Reference:</label>
+            <input type="text" name="reference" id="reference">
+        </div>
+        <br>
         <div id="company_details_wrapper">
             <div class="company_details">
                 <input type="text" name="company_name" width="200" placeholder="Company Details" />
             </div>
         </div>
+        <br>
         <input class="btn btn-default" type="button" id="add-detail" name="add-detail" value="Add Detail" />
         <input class="btn btn-default" type="button" id="remove-detail" name="remove-detail" value="Remove Detail" />
         <table class="table">
             <thead>
                 <tr>
                 <th>Item Description</th>
+                <th>Make</th>
                 <th>Quantity</th>
-                <th>Unit Measurement</th>
                 <th>Unit Price</th>
                 </tr>
             </thead>
@@ -30,16 +46,19 @@
                         <input type="text" name="comment" placeholder="Item Description" />
                     </td>
                     <td>
-                        <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required />
+                        <input type="text" step="1" name="make" width="1" placeholder="Make" required />
                     </td>
                     <td>
+                        <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required />
+                    </td>
+                    <!-- <td>
                         <select name="unit_measurement" required placeholder="Unit Of Measurement">
                             <option value="Nos">No</option>
                             <option value="Box">Box</option>
                             <option value="Feet">Feet</option>
                             <option value="Kg">Kg</option>
                         </select>
-                    </td>
+                    </td> -->
                     <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required /></td>
                 </tr>
             </tbody>
@@ -48,11 +67,28 @@
         <input class="btn btn-default" type="button" id="add-item" name="add-item" value="Add Item" />
         <input class="btn btn-default" type="button" id="remove-item" name="remove-item" value="Remove Item" />
         <hr>
-        <div class="term-row clearfix form-group">
-            <input class="input-sm form-control" type="text" name="term" placeholder="Terms & Conditions" />
+        <div>
+            <div>
+                <label for="price">Prices:</label>
+                <input type="text" name="price" id="price">
+            </div>
+            <div>
+                <label for="tax">Taxes:</label>
+                <input type="text" name="tax" id="tax">
+            </div>
+            <div>
+                <label for="delivery">Delivery:</label>
+                <input type="text" name="delivery" id="delivery">
+            </div>
+            <div>
+                <label for="validity">Validity:</label>
+                <input type="text" name="validity" id="validity">
+            </div>
+            <div>
+                <label for="payment">Payment:</label>
+                <input type="text" name="payment" id="payment">
+            </div>
         </div>
-        <input class="btn btn-default" type="button" id="add-term" name="add-term" value="Add Term" />
-        <input class="btn btn-default" type="button" id="remove-term" name="remove-term" value="Remove Term" />
         <br>
         <hr>
         <input type="button" id="create-quotation" name="create-quotation" value="Create Quotation">

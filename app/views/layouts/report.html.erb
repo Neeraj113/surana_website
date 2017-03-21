@@ -33,7 +33,7 @@
           if($('.company_details').length > 1){
             $('.company_details').last().remove();
           }
-        })
+        });
 
         var $addItem = $('#add-item'),
           $removeItem = $('#remove-item'),
@@ -47,19 +47,6 @@
         $removeItem.click(function(){
           if($('.item-row').length > 1){
             $('.item-row').last().remove();
-          }
-        })
-        var $addTerm = $('#add-term'),
-          $removeTerm = $('#remove-term'),
-          $term = $('.term-row').clone();
-
-        $addTerm.click(function() {
-          $term.clone().insertBefore( $addTerm );
-        });
-
-        $removeTerm.click(function(){
-          if($('.term-row').length > 1){
-            $('.term-row').last().remove();
           }
         });
 
@@ -76,20 +63,24 @@
               temp[a[i].name] = a[i].value;
             }
             data.items.push(temp);
-          })
-          data.terms = []
-          $('.term-row input').each(function(){
-            data.terms.push($(this)[0].value);
           });
           data.details = []
           $('.company_details input').each(function(){
             data.details.push($(this)[0].value);
           });
+          data.quotation = $('#quotation').val()
+          data.site = $('#site').val()
+          data.reference = $('#reference').val()
+          data.terms = {}
+          data.terms.price = $('#price').val()
+          data.terms.tax = $('#tax').val()
+          data.terms.delivery = $('#delivery').val()
+          data.terms.validity = $('#validity').val()
+          data.terms.payment = $('#payment').val()
           return data;
         }
         $('#create-quotation').click(function(){
-          var data = getFormData();
-          window.open("/reports/show?"+data, "_blank");
+          window.open("/reports/show?data="+JSON.stringify(getFormData()), "_blank");
         })
       })
     </script>

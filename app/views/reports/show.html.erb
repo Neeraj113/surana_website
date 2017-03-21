@@ -1,52 +1,64 @@
-<div class="report">
+<div class="report" style="font-size: 16px;">
   <img src=/assets/surana_head.png alt="Surana Header" style="width:100%;" class="company_logo" itemprop="logo">
   <div class="container">
-    <% if params['details'] && params['details'].length > 0 %>
+    <div class="text-center"><b style="text-decoration: underline;">Quotation</b><b>: <%= @data['quotation'] %></b><span style="float: right;">Date: <%= Time.now.strftime("%D") %></span></div>
+    <% if @data['details'] && @data['details'].length > 0 %>
       <h4>
         To,
       </h4>
-      <% params['details'].each do |x| %>
-        <h4>
+      <% @data['details'].each do |x| %>
+        <h5 style="margin: 2px 0; font-size: 16px;">
           <%= x %>
-        </h4>
+        </h5>
       <% end %>
     <% end %>
+    <br>
     <div>Dear Sir,</div>
     <div style="margin-left:30px">We are pleased to quote as below:</div>
-    <% if params['items'] && params['items'].length > 0 %>
-      <table class="table table-bordered">
-        <!-- <caption>Items Quotation</caption> -->
+    <br>
+    <% if @data['items'] && @data['items'].length > 0 %>
+      <table class="table table-bordered table-striped table-condensed">
         <thead>
           <tr>
-            <th style="text-align:center;text-decoration:underline;width: 50%;">Item Description</th>
+            <th style="text-align:center;text-decoration:underline;">S.No</th>
+            <th style="text-align:center;text-decoration:underline;width: 50%;" id="item">Item Description</th>
+            <th style="text-align:center;text-decoration:underline;">Make</th>
             <th style="text-align:center;text-decoration:underline;">Quantity</th>
-            <th style="text-align:center;text-decoration:underline;">Unit Measurement</th>
             <th style="text-align:center;text-decoration:underline;">Unit Price</th>
             <th style="text-align:center;text-decoration:underline;">Total</th>
           </tr>
         </thead>
         <tbody>
-          <% params['items'].each do |k,v| %>
+          <% grand_total = 0 %>
+          <% total = 0 %>
+          <% @data['items'].each_with_index do |k,v| %>
+            <% total = k['quantity'].to_i*k['unit_price'].to_i %>
+            <% grand_total = grand_total + total %>
             <tr>
-              <td><%= v['comment'] %></td>
-              <td><%= v['quantity'] %></td>
-              <td><%= v['unit_measurement'] %></td>
-              <td><%= v['unit_price'] %></td>
-              <td><%= v['quantity'].to_i*v['unit_price'].to_i %></td>
+              <td class="text-center"><%= v.to_i + 1 %> )</td>
+              <td><%= k['comment'] %></td>
+              <td class="text-center"><%= k['make'] %></td>
+              <td class="text-center"><%= k['quantity'] %></td>
+              <td class="text-center"><%= k['unit_price'] %></td>
+              <td class="text-center"><%= total %></td>
             </tr>
           <% end %>
+          <tr>
+            <td class="text-right" colspan="5"><b>Grand Total</b></td>
+            <td class="text-center"><b><%= grand_total %></b></td>
+          </tr>
         </tbody>
       </table>
     <% end %>
-    <% if params['terms'] && params['terms'].length > 0 %>
-      <div>
-        Terms & Conditions:
-      </div>
-      <ul>
-        <% params['terms'].each do |x| %>
-          <li><%= x %></li>
-        <% end %>
-      </ul>
-    <% end %>
+    <br>
+    <br>
+    <div><b style="text-decoration: underline;">Terms and Conditions</b><b>:</b></div>
+    <ol style="padding-left: 16px;">
+      <li style="list-style-type: disc;"><b>Prices:-</b> <%= @data['terms']['price'] %></li>
+      <li style="list-style-type: disc;"><b>Taxes:-</b> <%= @data['terms']['tax'] %></li>
+      <li style="list-style-type: disc;"><b>Delivery:-</b> <%= @data['terms']['delivery'] %></li>
+      <li style="list-style-type: disc;"><b>Validity:-</b> <%= @data['terms']['validity'] %></li>
+      <li style="list-style-type: disc;"><b>Payment:-</b> <%= @data['terms']['payment'] %></li>
+    </ol>
   </div>
 </div>

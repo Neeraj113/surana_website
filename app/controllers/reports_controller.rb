@@ -16,6 +16,12 @@ class ReportsController < ApplicationController
 	end
 
 	def show
+		@data = JSON.parse(show_params)
 		render 'show'
+	end
+
+	private
+	def show_params
+		params.require(:data)
 	end
 end
