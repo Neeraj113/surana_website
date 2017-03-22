@@ -1,7 +1,11 @@
 <div class="report" style="font-size: 16px;">
   <img src=/assets/surana_head.png alt="Surana Header" style="width:100%;" class="company_logo" itemprop="logo">
-  <div class="container">
-    <div class="text-center"><b style="text-decoration: underline;">Quotation</b><b>: <%= @data['quotation'] %></b><span style="float: right;">Date: <%= Time.now.strftime("%D") %></span></div>
+  <div>
+    <div class="text-center clearfix">
+    <% if @data['quotation'].present? %>
+      <b style="text-decoration: underline;">Quotation</b><b>: <%= @data['quotation'] %></b>
+    <% end %>
+    <span style="float: right;">Date: <%= Time.now.strftime("%D") %></span></div>
     <% if @data['details'] && @data['details'].length > 0 %>
       <h4>
         To,
@@ -12,8 +16,16 @@
         </h5>
       <% end %>
     <% end %>
+    <% if @data['site'].present? %>
+      <h5 style="margin: 2px 0; font-size: 16px;">
+        <span style="text-decoration: underline;">Project Site:</span> <%= @data['site'] %>
+      </h5>
+    <% end %>
     <br>
     <div>Dear Sir,</div>
+    <% if @data['reference'].present? %>
+      <div style="font-size: 16px; margin: 0 70px 10px;"><b style="text-decoration: underline;">Reference:</b><span>  <%= @data['reference'] %></span></div>
+    <% end %>
     <div style="margin-left:30px">We are pleased to quote as below:</div>
     <br>
     <% if @data['items'] && @data['items'].length > 0 %>
@@ -21,9 +33,10 @@
         <thead>
           <tr>
             <th style="text-align:center;text-decoration:underline;">S.No</th>
-            <th style="text-align:center;text-decoration:underline;width: 50%;" id="item">Item Description</th>
+            <th style="text-align:center;text-decoration:underline;width: 45%;" id="item">Item Description</th>
             <th style="text-align:center;text-decoration:underline;">Make</th>
-            <th style="text-align:center;text-decoration:underline;">Quantity</th>
+            <th style="text-align:center;text-decoration:underline;">Qty</th>
+            <th style="text-align:center;text-decoration:underline;">UOM</th>
             <th style="text-align:center;text-decoration:underline;">Unit Price</th>
             <th style="text-align:center;text-decoration:underline;">Total</th>
           </tr>
@@ -39,12 +52,13 @@
               <td><%= k['comment'] %></td>
               <td class="text-center"><%= k['make'] %></td>
               <td class="text-center"><%= k['quantity'] %></td>
+              <td class="text-center"><%= k['unit_measurement'] %></td>
               <td class="text-center"><%= k['unit_price'] %></td>
               <td class="text-center"><%= total %></td>
             </tr>
           <% end %>
           <tr>
-            <td class="text-right" colspan="5"><b>Grand Total</b></td>
+            <td class="text-right" colspan="6"><b>Grand Total</b></td>
             <td class="text-center"><b><%= grand_total %></b></td>
           </tr>
         </tbody>
@@ -54,11 +68,21 @@
     <br>
     <div><b style="text-decoration: underline;">Terms and Conditions</b><b>:</b></div>
     <ol style="padding-left: 20px;">
-      <li style="list-style-type: disc;"><b>Prices:-</b> <%= @data['terms']['price'] %></li>
-      <li style="list-style-type: disc;"><b>Taxes:-</b> <%= @data['terms']['tax'] %></li>
-      <li style="list-style-type: disc;"><b>Delivery:-</b> <%= @data['terms']['delivery'] %></li>
-      <li style="list-style-type: disc;"><b>Validity:-</b> <%= @data['terms']['validity'] %></li>
-      <li style="list-style-type: disc;"><b>Payment:-</b> <%= @data['terms']['payment'] %></li>
+      <% if @data['terms']['price'].present? %>
+        <li style="list-style-type: disc;"><b>Prices:-</b> <%= @data['terms']['price'] %></li>
+      <% end %>
+      <% if @data['terms']['tax'].present? %>
+        <li style="list-style-type: disc;"><b>Taxes:-</b> <%= @data['terms']['tax'] %></li>
+      <% end %>
+      <% if @data['terms']['delivery'].present? %>
+        <li style="list-style-type: disc;"><b>Delivery:-</b> <%= @data['terms']['delivery'] %></li>
+      <% end %>
+      <% if @data['terms']['validity'].present? %>
+        <li style="list-style-type: disc;"><b>Validity:-</b> <%= @data['terms']['validity'] %></li>
+      <% end %>
+      <% if @data['terms']['payment'].present? %>
+        <li style="list-style-type: disc;"><b>Payment:-</b> <%= @data['terms']['payment'] %></li>
+      <% end %>
     </ol>
     <div class="text-right">Yours Faithfully,</div>
     <div class="text-right">Gaurav Surana</div>

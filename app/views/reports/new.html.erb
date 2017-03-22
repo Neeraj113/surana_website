@@ -37,6 +37,7 @@
                 <th>Item Description</th>
                 <th>Make</th>
                 <th>Quantity</th>
+                <th>UOM</th>
                 <th>Unit Price</th>
                 </tr>
             </thead>
@@ -46,19 +47,21 @@
                         <input type="text" name="comment" placeholder="Item Description" />
                     </td>
                     <td>
-                        <input type="text" step="1" name="make" width="1" placeholder="Make" required />
+                        <input type="text" step="1" value="--" name="make" width="1" placeholder="Make" required />
                     </td>
                     <td>
                         <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required />
                     </td>
-                    <!-- <td>
+                    <td>
                         <select name="unit_measurement" required placeholder="Unit Of Measurement">
                             <option value="Nos">No</option>
                             <option value="Box">Box</option>
                             <option value="Feet">Feet</option>
                             <option value="Kg">Kg</option>
+                            <option value="Mtr">Mtr</option>
+                            <option value="Bag">Bag</option>
                         </select>
-                    </td> -->
+                    </td>
                     <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required /></td>
                 </tr>
             </tbody>

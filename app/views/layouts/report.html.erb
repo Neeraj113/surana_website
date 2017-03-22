@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style type="text/css" media="screen">
+    <%= stylesheet_link_tag    'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">
+      .table-striped > tbody > tr:nth-of-type(odd){
+        background-color: #f9f9f9!important;
+      }
+      .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+        border: 3px solid #dddddd!important;
+      }
       @media print {
         @page { margin: 0; }
         body { margin: 1.6cm; }
+        .table-striped > tbody > tr:nth-of-type(odd){
+          background-color: #f9f9f9!important;
+        }
+        .table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+          border: 3px solid #dddddd!important;
+        }
       }  
     </style>
     <title>Report Generation</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="container">
@@ -71,7 +83,7 @@
             data.details.push($(this)[0].value);
           });
           data.quotation = $('#quotation').val()
-          data.site = $('#site').val()
+          data.site = $('#project_site').val()
           data.reference = $('#reference').val()
           data.terms = {}
           data.terms.price = $('#price').val()
