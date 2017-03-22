@@ -80,7 +80,8 @@
           return data;
         }
         $('#create-quotation').click(function(){
-          window.open("/reports/show?data="+JSON.stringify(getFormData()), "_blank");
+          var query = window.btoa(JSON.stringify(getFormData()));
+          window.open("/reports/show?data="+query, "_blank");
         })
       })
     </script>

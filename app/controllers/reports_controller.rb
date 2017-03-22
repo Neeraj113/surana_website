@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 	end
 
 	def show
-		@data = JSON.parse(show_params)
+		@data = JSON.parse(Base64.decode64(show_params))
 		render 'show'
 	end
 
