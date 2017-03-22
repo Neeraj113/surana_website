@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 	before_filter :set_current_user, :only => [:index, :create, :show]
 
 	def index
-		@users = User.all
+		if session[:user_id].present?
+			@users = User.all
+		else
+			redirect_to login_path_url
+		end
 	end
 	
 	def new
