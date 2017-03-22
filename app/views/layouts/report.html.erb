@@ -9,13 +9,15 @@
     </style>
     <title>Report Generation</title>
     <%= csrf_meta_tags %>
-    <% if @current_user %>
-      <%= link_to "Log out", logout_path, method: :delete %>
-    <% end %>
     <%= stylesheet_link_tag    'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="container">
+    <% if @current_user %>
+      <div class="text-right">
+        <%= link_to "Log out", logout_path, method: :delete %>
+      </div>
+    <% end %>
     <%= yield %>
     <%= javascript_include_tag 'reports', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript">

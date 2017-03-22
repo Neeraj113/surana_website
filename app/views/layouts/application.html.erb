@@ -3,14 +3,16 @@
   <head>
     <title>SuranaWebsite</title>
     <%= csrf_meta_tags %>
-    <% if @current_user %>
-      <%= link_to "Log out", logout_path, method: :delete %>
-    <% end %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="container">
+    <% if @current_user %>
+      <div class="text-right">
+        <%= link_to "Log out", logout_path, method: :delete %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

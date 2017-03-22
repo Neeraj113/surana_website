@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get '/users'                      => 'users#index'
   get '/users/:id'                  => 'users#show', :as => 'user'
 
-  get '/reports/new'                => 'reports#new'
+  get '/reports/new'                => 'reports#new', :as => 'generate_report'
   post '/reports/create'            => 'reports#create'
   get '/reports/show'               => 'reports#show'
 end
