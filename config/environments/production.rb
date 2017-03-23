@@ -97,5 +97,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.assets.precompile += %w( *.css *.erb *.scss *.js *.coffee *.png *.jpg *.ico *.gif)
+  config.assets.precompile += [/^[-_a-zA-Z0-9]*\..*/]
 end
