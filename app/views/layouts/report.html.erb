@@ -94,7 +94,7 @@
           return data;
         }
         $('#create-quotation').click(function(){
-          var query = window.btoa(JSON.stringify(getFormData()));
+          var query = window.btoa(unescape(encodeURIComponent(JSON.stringify(data))));
           window.open("/reports/show?data="+query, "_blank");
         })
       })
