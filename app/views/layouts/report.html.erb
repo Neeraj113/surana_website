@@ -85,6 +85,7 @@
           data.quotation = $('#quotation').val()
           data.site = $('#project_site').val()
           data.reference = $('#reference').val()
+          data.pandf = $('#pandf').val()
           data.terms = {}
           data.terms.price = $('#price').val()
           data.terms.tax = $('#tax').val()
@@ -94,7 +95,7 @@
           return data;
         }
         $('#create-quotation').click(function(){
-          var query = window.btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+          var query = window.btoa(unescape(encodeURIComponent(JSON.stringify(getFormData()))));
           window.open("/reports/show?data="+query, "_blank");
         })
       })
