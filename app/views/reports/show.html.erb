@@ -57,10 +57,34 @@
               <td class="text-center"><%= total %></td>
             </tr>
           <% end %>
-          <tr>
-            <td class="text-right" colspan="6"><b>Grand Total</b></td>
-            <td class="text-center"><b><%= grand_total %></b></td>
-          </tr>
+          <% if @data['show_pandf'].present? || @data['show_tax'].present? %>
+            <tr>
+              <td class="text-right" colspan="6"><b>Total</b></td>
+              <td class="text-center"><b><%= grand_total %></b></td>
+            </tr>
+            <% if @data['show_tax'].present? %>
+              <tr>
+                <td class="text-right" colspan="6"><b>Taxes</b></td>
+                <td class="text-center"><b><%= (grand_total*@data['tax_value'].to_f).round %></b></td>
+              </tr>
+            <% end %>
+            <% if @data['show_pandf'].present? %>
+              <tr>
+                <td class="text-right" colspan="6"><b>Packing And Forwarding:</b></td>
+                <td class="text-center"><b><%= @data['pandf'].to_i %></b></td>
+              </tr>
+            <% end %>
+            <% final_v1 = @data['show_tax'].present? ? (grand_total + (grand_total*@data['tax_value'].to_f).round + @data['pandf'].to_i) : (grand_total + @data['pandf'].to_i) %>
+            <tr>
+              <td class="text-right" colspan="6"><b>Grand Total</b></td>
+              <td class="text-center"><b><%= final_v1 %></b></td>
+            </tr>
+          <% else %>
+            <tr>
+              <td class="text-right" colspan="6"><b>Grand Total</b></td>
+              <td class="text-center"><b><%= grand_total %></b></td>
+            </tr>
+          <% end %>
         </tbody>
       </table>
     <% end %>
@@ -86,5 +110,6 @@
     </ol>
     <div class="text-right">Yours Faithfully,</div>
     <div class="text-right">Gaurav Surana</div>
+    <div class="text-right">+91-9849156450</div>
   </div>
 </div>

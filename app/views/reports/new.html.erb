@@ -71,6 +71,23 @@
         <input class="btn btn-default" type="button" id="remove-item" name="remove-item" value="Remove Item" />
         <hr>
         <div>
+            <label for="show_pandf">Show P & F?</label>
+            <input type="checkbox" name="show_pandf" id="show_pandf">
+            <label for="pandf">Packing And Forwarding:</label>
+            <input type="text" name="pandf" id="pandf">
+        </div>
+        <hr>
+        <div>
+            <label for="show_tax">Show Tax?</label>
+            <input type="checkbox" name="show_tax" id="show_tax">
+            <select name="tax_value" id="tax_value" placeholder="Tax Value">
+                <option value="0">0%</option>
+                <option value="0.05">5%</option>
+                <option value="0.145">14.5%</option>
+            </select>
+        </div>
+        <hr>
+        <div>
             <div>
                 <label for="price">Prices:</label>
                 <input type="text" name="price" id="price">
