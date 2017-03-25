@@ -74,7 +74,8 @@
                 <td class="text-center"><b><%= @data['pandf'].to_i %></b></td>
               </tr>
             <% end %>
-            <% final_v1 = @data['show_tax'].present? ? (grand_total + (grand_total*@data['tax_value'].to_f).round + @data['pandf'].to_i) : (grand_total + @data['pandf'].to_i) %>
+            <% final_v1 = @data['show_tax'].present? ? (grand_total + (grand_total*@data['tax_value'].to_f).round) : grand_total %>
+            <% final_v1 += @data['show_pandf'].present? ? @data['pandf'].to_i : 0 %>
             <tr>
               <td class="text-right" colspan="6"><b>Grand Total</b></td>
               <td class="text-center"><b><%= final_v1 %></b></td>
