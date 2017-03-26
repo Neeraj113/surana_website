@@ -489,7 +489,7 @@ section {
     top: 0;
     left: 15px;
     position: absolute;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
     text-align: center;
     width: calc(100% - 30px);
     height: 200px;
@@ -504,17 +504,16 @@ section {
     display: none
 }
 
-.work-list a h3 {
+.work-space h3 {
     text-align: center;
     padding: 15px 0;
-    font-size: 15px;
+    font-size: 16px;
     float: left;
     width: 100%;
-    font-weight: 600;
-    background: #8ab839;
+    background: #fcac45;
     color: #fff;
     margin: 0;
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 
 .work-list a .featured-img img {
@@ -887,4 +886,8 @@ textarea {
 
 #contactForm .error .form-control {
     color: #a94442;
+}
+
+.content{
+    font-size: 15px;
 }
