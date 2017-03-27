@@ -8,13 +8,13 @@ class CategoriesController < ApplicationController
 		keywords 	= options[:keywords]
 		image       = options[:image] || "your-default-image-url"
 		current_url = request.url
-
 		# Let's prepare a nice set of defaults
 		defaults = {
 			site:           site_name,
 			title:       	title,
 			image:       	image,
 			description: 	description,
+			'google-site-verification':    'kZ-n--38610LddRUQtTzeci5Y2E8jyu1i681Oo0ll0k',
 			language:    	'english',
 			googlebot:   	'index, follow',
 			google:      'notranslate',
@@ -77,8 +77,8 @@ class CategoriesController < ApplicationController
 	def bathroom_fittings
 		prepare_meta_tags title: "Bathroom Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
-		                description: "Jaquar, Cera, Bright(Lion, BSP, Amar) Brands | Bathroom Fittings | Surana Sanitations | Visakhapatnam"
+		                keywords: "jaquar, cera, bright, shakti, prayag, faucet, kitchen faucets, kitchen sink faucets, sink faucets, water faucet, water tap, bathroom taps, basin taps, tap online, sensor taps, sink taps, dealers, distributor, vizag, visakhapatnam",
+		                description: "Jaquar, Cera, Bright(Lion, BSP, Amar), Prayag, Shakti Brands | Bathroom Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
 	def bathtubs

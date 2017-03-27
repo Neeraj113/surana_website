@@ -61,7 +61,7 @@
                             <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required value="<%= x['quantity'] %>"/>
                         </td>
                         <td>
-                            <select name="unit_measurement" required placeholder="Unit Of Measurement" value="<%= x['unit_measurement'] %>">
+                            <select name="unit_measurement" required placeholder="Unit Of Measurement">
                                 <option value="Nos">No</option>
                                 <option value="Box">Box</option>
                                 <option value="Feet">Feet</option>
@@ -113,7 +113,7 @@
         <div>
             <label for="show_tax">Show Tax?</label>
             <input type="checkbox" name="show_tax" id="show_tax" value="<%= @data['show_tax'] %>">
-            <select name="tax_value" id="tax_value" placeholder="Tax Value" value="<%= @data['tax_value'] %>">
+            <select name="tax_value" id="tax_value" placeholder="Tax Value">
                 <option value="0">0%</option>
                 <option value="0.05">5%</option>
                 <option value="0.145">14.5%</option>
