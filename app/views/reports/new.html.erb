@@ -10,23 +10,29 @@
         <h5>Add Company Details</h5>
         <div>
             <label for="quotation">Quotation:</label>
-            <input type="text" name="quotation" id="quotation">
+            <input type="text" name="quotation" id="quotation" value="<%= @data['quotation'] %>">
         </div>
         <br>
         <div>
             <label for="project_site">Project Site:</label>
-            <input type="text" name="project_site" id="project_site">
+            <input type="text" name="project_site" id="project_site" value="<%= @data['site'] %>">
         </div>
         <br>
         <div>
             <label for="reference">Reference:</label>
-            <input type="text" name="reference" id="reference">
+            <input type="text" name="reference" id="reference" value="<%= @data['reference'] %>">
         </div>
         <br>
         <div id="company_details_wrapper">
-            <div class="company_details">
-                <input type="text" name="company_name" width="200" placeholder="Company Details" />
-            </div>
+            <% if @data['details'].present? %>
+                <% @data['details'].each do |x| %>
+                    <div class="company_details">
+                        <input type="text" name="company_name" width="200" placeholder="Company Details" value="<%= x %>"/>
+                    </div>
+                <% end %>
+            <% else %>
+                
+            <% end %>
         </div>
         <br>
         <input class="btn btn-default" type="button" id="add-detail" name="add-detail" value="Add Detail" />
@@ -42,6 +48,32 @@
                 </tr>
             </thead>
             <tbody id="item-container">
+            <% if @data['items'].present? %>
+                <% @data['items'].each do |x| %>
+                    <tr class="item-row">
+                        <td>
+                            <input type="text" name="comment" placeholder="Item Description" value="<%= x['comment'] %>"/>
+                        </td>
+                        <td>
+                            <input type="text" step="1" name="make" width="1" placeholder="Make" required value="<%= x['make'] %>"/>
+                        </td>
+                        <td>
+                            <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required value="<%= x['quantity'] %>"/>
+                        </td>
+                        <td>
+                            <select name="unit_measurement" required placeholder="Unit Of Measurement" value="<%= x['unit_measurement'] %>">
+                                <option value="Nos">No</option>
+                                <option value="Box">Box</option>
+                                <option value="Feet">Feet</option>
+                                <option value="Kg">Kg</option>
+                                <option value="Mtr">Mtr</option>
+                                <option value="Bag">Bag</option>
+                            </select>
+                        </td>
+                        <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required value="<%= x['unit_price'] %>"/></td>
+                    </tr>
+                <% end %>
+            <% else %>
                 <tr class="item-row">
                     <td>
                         <input type="text" name="comment" placeholder="Item Description" />
@@ -64,6 +96,7 @@
                     </td>
                     <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required /></td>
                 </tr>
+            <% end %>
             </tbody>
         </table>
 
@@ -72,15 +105,15 @@
         <hr>
         <div>
             <label for="show_pandf">Show P & F?</label>
-            <input type="checkbox" name="show_pandf" id="show_pandf">
+            <input type="checkbox" name="show_pandf" id="show_pandf" value="<%= @data['show_pandf'] %>">
             <label for="pandf">Packing And Forwarding:</label>
-            <input type="text" name="pandf" id="pandf">
+            <input type="text" name="pandf" id="pandf" value="<%= @data['pandf'] %>">
         </div>
         <hr>
         <div>
             <label for="show_tax">Show Tax?</label>
-            <input type="checkbox" name="show_tax" id="show_tax">
-            <select name="tax_value" id="tax_value" placeholder="Tax Value">
+            <input type="checkbox" name="show_tax" id="show_tax" value="<%= @data['show_tax'] %>">
+            <select name="tax_value" id="tax_value" placeholder="Tax Value" value="<%= @data['tax_value'] %>">
                 <option value="0">0%</option>
                 <option value="0.05">5%</option>
                 <option value="0.145">14.5%</option>
@@ -90,23 +123,23 @@
         <div>
             <div>
                 <label for="price">Prices:</label>
-                <input type="text" name="price" id="price">
+                <input type="text" name="price" id="price"value="<%= @data['terms']['price'] %>">
             </div>
             <div>
                 <label for="tax">Taxes:</label>
-                <input type="text" name="tax" id="tax">
+                <input type="text" name="tax" id="tax"value="<%= @data['terms']['tax'] %>">
             </div>
             <div>
                 <label for="delivery">Delivery:</label>
-                <input type="text" name="delivery" id="delivery">
+                <input type="text" name="delivery" id="delivery"value="<%= @data['terms']['delivery'] %>">
             </div>
             <div>
                 <label for="validity">Validity:</label>
-                <input type="text" name="validity" id="validity">
+                <input type="text" name="validity" id="validity"value="<%= @data['terms']['validity'] %>">
             </div>
             <div>
                 <label for="payment">Payment:</label>
-                <input type="text" name="payment" id="payment">
+                <input type="text" name="payment" id="payment"value="<%= @data['terms']['payment'] %>">
             </div>
         </div>
         <br>

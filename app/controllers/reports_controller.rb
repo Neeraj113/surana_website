@@ -3,6 +3,9 @@ class ReportsController < ApplicationController
 
 	def new
 		if logged_in?
+			if params[:data].present?
+				@data = JSON.parse(Base64.decode64(params[:data]))
+			end
 			render 'new'
 		else
 			flash[:alert] = "Please login to authenticate yourself."
