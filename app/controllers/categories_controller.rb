@@ -84,7 +84,7 @@ class CategoriesController < ApplicationController
 	def bathtubs
 		prepare_meta_tags title: "Bathtubs",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "bath tub, bath tubs, bathtub, bathtub price India, bathtubs India, Jaquar bathtub, Cera bathtub Jaquar bath tub, Cera bath tub, Jaquar bathtub price, Cera bathtub price, small bathtub, whirlpool tub, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera",
 		                description: "Jaquar, Cera Brands | Bathtubs | Surana Sanitations | Visakhapatnam"
 	end
 
