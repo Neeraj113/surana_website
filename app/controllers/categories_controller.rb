@@ -175,21 +175,21 @@ class CategoriesController < ApplicationController
 	def sanitaryware
 		prepare_meta_tags title: "Sanitaryware",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Sanitaryware, sanitary, Jaquar sanitaryware, Cera sanitaryware, sanitaryware brands, sanitary products, wash basin designs, wash basin online, basin design, bathroom basins, bathroom wash basin, small wash basin, washbasin design India, Jaquar wash basin, Cera wash basin, Jaquar basins, Cera basins, Jaquar sanitaryware price list, Cera sanitaryware price list, Jaquar wash basin price, Cera wash basin price, dealer, dealers, distributor, distributors, vizag, visakhapatnam, surana, sanitations",
 		                description: "Jaquar, Cera, Parryware Brands | Sanitaryware | Surana Sanitations | Visakhapatnam"
 	end
 
 	def shower_enclosures
 		prepare_meta_tags title: "Shower Enclosures",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Jaquar shower enclosure, Jaquar shower enclosures, stylish shower enclosure, modern shower enclosure, dealer, dealers, distributor, distributors, vizag, visakhapatnam",
 		                description: "Jaquar Brand | Shower Enclosures | Surana Sanitations | Visakhapatnam"
 	end
 
 	def shower_panels
 		prepare_meta_tags title: "Shower Panels",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "shower panels, Jaquar shower panels, Cera shower panels, bath shower panels, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera",
 		                description: "Jaquar, Cera Brands | Shower Panels | Surana Sanitations | Visakhapatnam"
 	end
 
@@ -217,7 +217,7 @@ class CategoriesController < ApplicationController
 	def water_heater
 		prepare_meta_tags title: "Water Heater",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "water heater, water heater price, instant water heater, electric water heater, gas water heater, tankless water heater, hot water heater, best water heater, heat pump water heater, waterheater, portable water heater, geyser, gas geyser, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar",
 		                description: "Jaquar Brand | Water Heater | Surana Sanitations | Visakhapatnam"
 	end
 
