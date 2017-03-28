@@ -91,35 +91,35 @@ class CategoriesController < ApplicationController
 	def brass_valves_and_fittings
 		prepare_meta_tags title: "Brass Valves And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Brass Valves, suppliers, traders, dealers, retailers, producers, Industrial Valves & Valve Fittings india, dealer, dealers, distributor, distributors, vizag, visakhapatnam, surana, sanitations, brass valve,brass valves fittings, zoloto, piero, super, zoloto valve, piero valve, super valve",
 		                description: "Zoloto, Bright(Lion, BSP, Amar), Peiro, Super Brands | Brass Valves & Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
 	def ci_manhole_covers
 		prepare_meta_tags title: "C.I Manhole Covers",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Manhole Cover,CI Manhole Cover,Aluminum Manhole Cover,Manhole Cover,Green Braided Hose,Safety Equipment,PVC Flat Hose,MS Wire,cast iron manhole covers,cast iron manhole covers suppliers,cast iron manhole covers exporters,exporters of ci manhole covers,cast iron manhole covers exporters India,dealer,dealers,distributor,distributors,vizag,visakhapatnam,swastika,pic,surana,sanitations,cast iron manhole covers,cast iron manhole covers suppliers,cast iron manhole covers wholesalers,cast iron manhole covers wholesale suppliers,cast iron manhole covers products,cast iron manhole covers ratings,cast iron manhole covers price,cast iron manhole covers reviews,India,Cast Iron Manhole Covers Frames & Gratings ,Gratings,Storage Tank Cover,Foot Step",
 		                description: "Swastika, Binayaka Brands | C.I Manhole Covers | Surana Sanitations | Visakhapatnam"
 	end
 
 	def ci_pipes_and_fittings
 		prepare_meta_tags title: "C.I Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Cast Iron Fitting, suppliers, exporters, traders, retailers, producers, Pipe Fittings and Plumbing Fittings india, Cast Iron Pipes, cast iron dwv system, plumbing system, dwv pipe, dwv fittings, green building plumbing system, surana, sanitations, PIC, SON, dealer, dealers, distributor, distributors, vizag, visakhapatnam",
 		                description: "P.I.C, SON Brands | C.I Pipes and Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
 	def cpvc_pipes_and_fittings
 		prepare_meta_tags title: "CPVC Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "CPVC Pipe Fittings, Chlorinated Polyvinyl Chloride Pipe Fittings, producers, Alloy, Metal, Plastic Pipe Fittings india, suppliers, exporters, traders, dealers, companies, retailers, producers, Andhra Pradesh, india, Plumbing, Pipes & Fittings, CPVC Pipe & Fittings, CPVC Pipes and Fittings, CPVC Pipe Fittings suppliers in Visakhapatnam, dealer, dealers, distributor, distributors, vizag, visakhapatnam, astral, ashirvad, prince",
 		                description: "Astral, Ashirvad, Prince Brands | CPVC Pipes & Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
 	def gi_pipes_and_fittings
 		prepare_meta_tags title: "G.I Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "GI Pipe Fitting Exporters in India, Unik Pipe Fittings, Galvanized Iron Pipe Fittings manufacturers in Inda, GI Pipe Fittings, Galvanized Iron Pipes Fitting, suppliers, exporters, traders, retailers, producers, Alloy, Metal, Malleable Iron Pipe Fitting, Malleable Iron Fittings, mi fittings, gi fittings, Galvanised, Galvanized, Elbow, Tee, Socket, Union, Hex Nipple, Back nut, Steel, Nipple, Nipples, Barrel, Indian, Standard, IS, IS1879, 1879, ISI, ISO, 9001, Flanges, Malleable Fittings, G I Fittings, Galvanized Fittings, cast iron fittings, malleable cast iron fitting, cast iron pipe fitting, malleable cast iron pipe fittings, dealer, dealers, distributor, distributors, vizag, visakhapatnam, oswal, jindal, tata, hb",
 		                description: "Oswal, Jindal, H.B, Tata Brands | G.I Pipes & Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
