@@ -196,21 +196,21 @@ class CategoriesController < ApplicationController
 	def swr_pipes_and_fittings
 		prepare_meta_tags title: "SWR Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Drip Irrigation System, Sprinkler Irrigation Systems, upvc drainage system, swr drainage system, Underground drainage system, pipes and fittings, SWR Fitting, suppliers, exporters, traders, retailers, producers, Pipe Fittings and Plumbing Fittings india, SWR fittings, SWR Pipes & Fittings, Sewage pipes and fittings for building, SWR Pipes, SWR Pipes and Fittings, dealer, dealers, distributor, distributors, vizag, visakhapatnam, andhra pradesh, sudhakar, astral, prince",
 		                description: "Sudhakar, Astral, Prince Brands | SWR Pipes & Fittings | Visakhapatnam"
 	end
 
 	def tiles
 		prepare_meta_tags title: "Tiles",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Ceramic Wall Tiles, wall tiles price, bathroom wall tiles, kitchen wall tiles,  wall design patterns, ceramic wall tiles bathroom, white ceramic wall tiles, ceramic glazed wall tiles, indian bathroom designs, ceramic tile flooring installation, glazed ceramic tile flooring, ceramic tile flooring bathroom, wood tile ceramic flooring, ceramic wood tile flooring, bathroom floor tiles ideas, ceramic tile flooring ideas, bathroom ceramic tile flooring, Ceramic Floor Tiles, Tiles, Ceramic Tiles, Wall Tiles, Floor Tiles, Bathroom Tiles, Vitrified Tiles, Vitrified Floor Tiles, Bathroom floor tiles, Wall Tiles Design, Bathroom Flooring Tiles, floor tiles design, best tiles india, best floor tiles, best wall tiles, tiles living room, tiles for bedroom, tiles for bathroom, new tiles designs, latest tile designs, new wall tile designs, new floor tile designs, latest wall tile design, newest wall tile design, dealer, dealers, distributor, distributors, vizag, visakhapatnam, andhra pradesh",
 		                description: "Johnson, Ardex Endura, Laticrete, Somany, Nitco, Kajaria Brands | Tiles | Surana Sanitations | Visakhapatnam"
 	end
 
 	def upvc_pipes_and_fittings
 		prepare_meta_tags title: "UPVC Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "upvc pipe fittings, upvc plumbing fittings Indian companies, upvc pipes and fittings, pipe,pipes,pressure,jain,irrigation,systems,system,irrigation systems,pvc pressure,pressure pipes,quick fix,sprinkler irrigation,pvc pressure pipes,sprinkler irrigation systems,pipe pipe fittings,pvc pressure pipe,pressure pipes,pressure pipe,pvc,quick fix pvc pipe, UPVC Pipe Fitting, Adhesive Material, UPVC Brass MTA, UPVC Brass Tee, upvc pipes in india, upvc pipes & fittings, upvc pipes, upvc plumbing fittings, plumbing fittings, upvc coupler, tee, elbow, upvc end cap, male adaptor, female adaptor, upvc brass tee,tank adaptor,, Unplasticized Polyvinyl Chloride Pipe Fittings, suppliers, exporters, traders, retailers, producers, Alloy, Metal, Plastic Pipe Fittings india, dealer, dealers, distributor, distributors, vizag, visakhapatnam, kisan, astral, ashirvad, andhra pradesh",
 		                description: "Kisan, Astral Brands | UPVC Pipes & Fittings | Surana Sanitations | Visakhapatnam"
 	end
 
@@ -224,7 +224,7 @@ class CategoriesController < ApplicationController
 	def water_tank
 		prepare_meta_tags title: "Water Tank",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "Plastic Water Tank, Plastic Water Storage Tank, exporters, producers, Industrial & Shipping Containers india, Water Tanks, exporters, traders, producers, Visakhapatnam, Andhra Pradesh, india, Sintex Water Tanks, Reno Water Tanks, Renotuff Water Tanks, Sintex Water Tanks prices, Reno Water Tanks prices, Renotuf Water Tanks prices, Sintex Water Tanks dealers, Reno Water Tanks dealers, Renotuf Water Tanks dealers, Sintex Water Tanks rates, Reno Water Tanks rates, Renotuf Water Tanks rates, distributors, wholesale process, models, Water Tanks, suppliers, exporters, traders, retailers, producers, Industrial & Shipping Containers india, List of Water Tank Cleaning Services in Visakhapatnam,Visakhapatnam, Map, Address, Phone number, Contact Number, local, dealer, dealers, distributor, distributors, vizag, visakhapatnam, sintex, reno, renotuf",
 		                description: "Sintex, Reno, Sudhakar Brands | Water Tank | Surana Sanitations | Visakhapatnam"
 	end
 
