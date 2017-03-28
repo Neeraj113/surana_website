@@ -70,7 +70,7 @@ class CategoriesController < ApplicationController
 	def bathroom_accessories
 		prepare_meta_tags title: "Bathroom Accessories",
 		                image: "http://ssbathstudio.com/assets/logo.png",
-		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
+		                keywords: "bathroom accessories, bin with paddle, Towel Holder, hand drayers, soap dispenser, Paper Towel dispenser, bathroom accessories, bathroom products, buy bathroom accessories, For your Bathroom, Bathroom Accessories Sets, Stainless Steel Bathroom Accessories, Modern and Designer Accessories for Bathroom, Bathroom Accessories, Mirrors, Bath Set, toothbrush holder, soap dishes, soap dispenser, cotton swabs, bathroom sets, dealer, dealers, distributor, distributors, vizag, visakhapatnam, andhra pradesh, jaquar, bright, prayag, bathking, xen, seiko, suppliers, exporters, traders, retailers, producers",
 		                description: "Jaquar, Prayag, Bathking, Xen, Seiko, Bright(Lion,BSP,Amar) Brands | Bathroom Accessories | Surana Sanitations| Visakhapatnam"
 	end
 
