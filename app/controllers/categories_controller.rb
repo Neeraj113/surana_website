@@ -2,6 +2,10 @@ class CategoriesController < ApplicationController
 	layout 'category.html.erb'
 
 	def prepare_meta_tags(options={})
+		#Settings Breadcrumbs
+		@category = {}
+		@category['title'] = options[:title]
+
 		site_name   = "Surana Sanitations"
 		title       = options[:title]
 		description = options[:description]

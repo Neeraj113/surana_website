@@ -29,118 +29,119 @@
     </head>
 
     <body data-spy=scroll data-target=#menu-section itemscope itemtype="http://schema.org/Store">
-    <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id=menu-section>
-        <div class=container>
-            <div class=navbar-header>
-                <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse><span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button><a class=navbar-brand itemprop="name" href=/>Surana Sanitations</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a class=sections href=/ itemprop=url>HOME</a></li>
-                    <li><a class=sections href=/#brands>BRANDS</a></li>
-                    <li><a class=sections href=/#products>PRODUCTS</a></li>
-                    <li><a class=sections href=/#contact>CONTACT</a></li>
-                    <li><a class=sections href=about-us>ABOUT US</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <%= yield %>
-    <nav id="footer">
-        <div class="container">
-            <div class="pull-left fnav">
-                <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016-2017.</div>
-            <div class="pull-right fnav">
-                <ul class="footer-social">
-                    <li>
-                        <a href=https://www.justdial.com/Visakhapatnam/Surana-Sanitations-Suryabagh/0891PX891-X891-160614135448-Q7L5_BZDET?xid=VmlzYWtoYXBhdG5hbSBTdXJhbmEgU2FuaXRhdGlvbnMgT3Bwb3NpdGUgS2FseWFuaSBQcmVzcyBTdXJ5YWJhZ2g= itemprop="sameAs" target=_blank><img class="logo" src=/assets/justdial.png alt="JustDial Logo"></a>
-                    </li>
-                    <li>
-                        <a href=http://www.indiamart.com/surana-sanitations itemprop="sameAs" target=_blank><img class="logo" src=/assets/indiamart.png alt="IndiaMart Member Logo"></a>
-                    </li>
-                    <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
-                    <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
-                    <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
-                    <li><a href="https://twitter.com/suranasanitary" itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
-                </ul>
+        <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id=menu-section>
+            <div class=container>
+                <div class=navbar-header>
+                    <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse><span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button><a class=navbar-brand itemprop="name" href=/>Surana Sanitations</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class=sections href=/ itemprop=url>HOME</a></li>
+                        <li><a class=sections href=/#brands>BRANDS</a></li>
+                        <li><a class=sections href=/#products>PRODUCTS</a></li>
+                        <li><a class=sections href=/#contact>CONTACT</a></li>
+                        <li><a class=sections href=about-us>ABOUT US</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </nav>
-    <div id="controls">
-        <ul>
-            <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
-            <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
-            <li><a href=https://twitter.com/suranasanitary itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
-            <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
-        </ul>
-    </div>
-    <%= javascript_include_tag 'categories', 'data-turbolinks-track': 'reload' %>
-    
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl=en&render=explicit" async defer></script>
-    <script>
-        function onloadCallback(){
-            if($('#captcha').length){
-                $('#captcha').html('');
-                grecaptcha.render('captcha', {
-                  'sitekey' : '6Lf1YyQTAAAAACx8qgdU_7HkZga7g__8dxwC6C_9',
-                  'expired-callback': function () {
-                    grecaptcha.reset();
-                  }
-                });
+        
+        <%= yield %>
+        <nav id="footer">
+            <div class="container">
+                <div class="pull-left fnav">
+                    <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016-2017.</div>
+                <div class="pull-right fnav">
+                    <ul class="footer-social">
+                        <li>
+                            <a href=https://www.justdial.com/Visakhapatnam/Surana-Sanitations-Suryabagh/0891PX891-X891-160614135448-Q7L5_BZDET?xid=VmlzYWtoYXBhdG5hbSBTdXJhbmEgU2FuaXRhdGlvbnMgT3Bwb3NpdGUgS2FseWFuaSBQcmVzcyBTdXJ5YWJhZ2g= itemprop="sameAs" target=_blank><img class="logo" src=/assets/justdial.png alt="JustDial Logo"></a>
+                        </li>
+                        <li>
+                            <a href=http://www.indiamart.com/surana-sanitations itemprop="sameAs" target=_blank><img class="logo" src=/assets/indiamart.png alt="IndiaMart Member Logo"></a>
+                        </li>
+                        <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
+                        <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                        <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="https://twitter.com/suranasanitary" itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="controls">
+            <ul>
+                <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
+                <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
+                <li><a href=https://twitter.com/suranasanitary itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
+                <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div>
+        <%= javascript_include_tag 'categories', 'data-turbolinks-track': 'reload' %>
+        
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl=en&render=explicit" async defer></script>
+        <script>
+            function onloadCallback(){
+                if($('#captcha').length){
+                    $('#captcha').html('');
+                    grecaptcha.render('captcha', {
+                      'sitekey' : '6Lf1YyQTAAAAACx8qgdU_7HkZga7g__8dxwC6C_9',
+                      'expired-callback': function () {
+                        grecaptcha.reset();
+                      }
+                    });
+                }
             }
-        }
-        if (document.location.hostname.search("ssbathstudio") !== -1) {
-            (function(d, e, j, h, f, c, b) {
-                d.GoogleAnalyticsObject = f;
-                d[f] = d[f] || function() {
-                    (d[f].q = d[f].q || []).push(arguments)
-                }, d[f].l = 1 * new Date();
-                c = e.createElement(j), b = e.getElementsByTagName(j)[0];
-                c.async = 1;
-                c.src = h;
-                b.parentNode.insertBefore(c, b)
-            })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
-            ga("create", "UA-79751485-1", "auto");
-            ga("send", "pageview");
-        }
-    </script>
-    <script>
-        function initialize() {
-            var f = document.getElementById("map-canvas");
-            if(f){
-                var b = {
-                    center: new google.maps.LatLng(17.712446, 83.29975),
-                    zoom: 16,
-                    scrollwheel: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                var e = new google.maps.Map(f, b);
-                var d = new google.maps.InfoWindow();
-                var a, c;
-                a = new google.maps.Marker({
-                    position: new google.maps.LatLng(17.712446, 83.29975),
-                    map: e
-                });
-                d.setContent('<div style="overflow: auto;"><strong>Surana Sanitations</strong><br>28-9-32, Suryabagh, Vizag<br><a style="color:#427fed;" href="https://www.google.com/maps/place/Surana+Sanitations/@17.712494,83.2976383,17z/data=!3m1!4b1!4m5!3m4!1s0x3a3969b1dfffbd55:0xefa68cd712aedf8c!8m2!3d17.712494!4d83.299827" target="_blank">View on Google Maps</a></div>');
-                d.open(e, a);
-                google.maps.event.addListenerOnce(a, "click", (function(g, h) {
-                    return function() {
-                        d.open(e, g)
-                    }
-                })(a, c))
+            if (document.location.hostname.search("ssbathstudio") !== -1) {
+                (function(d, e, j, h, f, c, b) {
+                    d.GoogleAnalyticsObject = f;
+                    d[f] = d[f] || function() {
+                        (d[f].q = d[f].q || []).push(arguments)
+                    }, d[f].l = 1 * new Date();
+                    c = e.createElement(j), b = e.getElementsByTagName(j)[0];
+                    c.async = 1;
+                    c.src = h;
+                    b.parentNode.insertBefore(c, b)
+                })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+                ga("create", "UA-79751485-1", "auto");
+                ga("send", "pageview");
             }
-        }
+        </script>
+        <script>
+            function initialize() {
+                var f = document.getElementById("map-canvas");
+                if(f){
+                    var b = {
+                        center: new google.maps.LatLng(17.712446, 83.29975),
+                        zoom: 16,
+                        scrollwheel: false,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    };
+                    var e = new google.maps.Map(f, b);
+                    var d = new google.maps.InfoWindow();
+                    var a, c;
+                    a = new google.maps.Marker({
+                        position: new google.maps.LatLng(17.712446, 83.29975),
+                        map: e
+                    });
+                    d.setContent('<div style="overflow: auto;"><strong>Surana Sanitations</strong><br>28-9-32, Suryabagh, Vizag<br><a style="color:#427fed;" href="https://www.google.com/maps/place/Surana+Sanitations/@17.712494,83.2976383,17z/data=!3m1!4b1!4m5!3m4!1s0x3a3969b1dfffbd55:0xefa68cd712aedf8c!8m2!3d17.712494!4d83.299827" target="_blank">View on Google Maps</a></div>');
+                    d.open(e, a);
+                    google.maps.event.addListenerOnce(a, "click", (function(g, h) {
+                        return function() {
+                            d.open(e, g)
+                        }
+                    })(a, c))
+                }
+            }
 
-        if(window.google){
-          initialize();
-        } else{
-          $.ajax('https://maps.googleapis.com/maps/api/js?callback=initialize&hl=en&render=explicit', {
-            crossDomain: true,
-            'data-turbolinks-eval' : false,
-            dataType: 'script'
-          });
-        }
-    </script>
+            if(window.google){
+              initialize();
+            } else{
+              $.ajax('https://maps.googleapis.com/maps/api/js?callback=initialize&hl=en&render=explicit', {
+                crossDomain: true,
+                'data-turbolinks-eval' : false,
+                dataType: 'script'
+              });
+            }
+        </script>
     </body>
 </html>

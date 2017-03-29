@@ -22,7 +22,11 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass'
 
+# To generate sitemap
 gem 'sitemap_generator'
+
+#To generate breadcrumbs
+gem "gretel"
 
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'bcrypt'
