@@ -1,4 +1,7 @@
 # Set the host name for URL creation
+require 'rubygems'
+require 'sitemap_generator'
+
 SitemapGenerator::Sitemap.default_host = "http://ssbathstudio.com"
 
 SitemapGenerator::Sitemap.create do
