@@ -25,9 +25,6 @@ gem 'bootstrap-sass'
 # To generate sitemap
 gem 'sitemap_generator'
 
-#To generate breadcrumbs
-gem "gretel"
-
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'bcrypt'
 gem 'owlcarousel-rails'

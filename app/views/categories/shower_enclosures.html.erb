@@ -1,8 +1,18 @@
-<% breadcrumb :category, @category %>
 <section id=category-page>
     <div class=container>
         <div class="row text-left animate-in" "data-anim-type=fade-in-up">
-            <%= breadcrumbs separator: " &rsaquo; " %>
+            <div class="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li id="firstBreadCrumb" class="breadcrumb-item" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="<%= request.protocol + request.host_with_port %>" itemprop="url" alt="" title="Surana Sanitations">
+                            <span class="tiny-text-grey" itemprop="title">Home</span>
+                        </a>
+                    </li>
+                    <li id="lastBreadCrumb" class="breadcrumb-item">
+                      <span class="tiny-text-grey"><%= @category['title'] %></span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="row text-center animate-in" data-anim-type=fade-in-up>
             <div class="hidden-xs hidden-sm col-md-4 col-lg-3 category-section">
