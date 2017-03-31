@@ -5,6 +5,10 @@ class ReportsController < ApplicationController
 		if logged_in?
 			if params[:data].present?
 				@data = JSON.parse(Base64.decode64(params[:data]))
+			else
+				@data = {
+					'terms' => {}
+				}
 			end
 			render 'new'
 		else
