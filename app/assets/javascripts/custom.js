@@ -1,7 +1,8 @@
 $(document).ready(function() {
     $(".scroll-me .sections,.see-list").bind("click", function(a) {
-        var b = $(a.currentTarget);
-        var temp = $(b.attr("href").replace("/",""));
+        //A hack for home page scroll
+        var b = $(a.currentTarget).attr("href").replace("/","") || "#home";
+        var temp = $(b);
         if(temp.length){
             a.preventDefault();
             $("html, body").stop().animate({
