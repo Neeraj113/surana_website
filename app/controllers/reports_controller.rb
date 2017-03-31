@@ -1,14 +1,11 @@
 class ReportsController < ApplicationController
 	layout 'report.html.erb'
 
+	# When editing the form do keep in mind to set the default value
 	def new
 		if logged_in?
 			if params[:data].present?
 				@data = JSON.parse(Base64.decode64(params[:data]))
-			else
-				@data = {
-					'terms' => {}
-				}
 			end
 			render 'new'
 		else

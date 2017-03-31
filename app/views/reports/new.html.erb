@@ -1,3 +1,16 @@
+<!-- Setting default values so that form doesn't break -->
+<% @data = @data || {
+    'quotation' => '',
+    'site' => '',
+    'reference' => '',
+    'details' => [],
+    'items' => [],
+    'terms' => {},
+    'show_pandf' => true,
+    'pandf' => '',
+    'show_tax' => false,
+    'tax_value' => '0'
+    } %>
 <% @page_title = "Report Generation" %>
 <div class="Login_Form container">
     <h1>Generate Report</h1>
@@ -64,12 +77,7 @@
                         </td>
                         <td>
                             <select name="unit_measurement" required placeholder="Unit Of Measurement">
-                                <option value="Nos">No</option>
-                                <option value="Box">Box</option>
-                                <option value="Feet">Feet</option>
-                                <option value="Kg">Kg</option>
-                                <option value="Mtr">Mtr</option>
-                                <option value="Bag">Bag</option>
+                                <%= options_for_select([['Nos','No'],['Box','Box'],['Feet','Feet'],['Kg','Kg'],['Mtr','Mtr'],['Bag','Bag']], x['unit_measurement']) %>
                             </select>
                         </td>
                         <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required value="<%= x['unit_price'] %>"/></td>
@@ -107,18 +115,16 @@
         <hr>
         <div>
             <label for="show_pandf">Show P & F?</label>
-            <input type="checkbox" name="show_pandf" id="show_pandf" value="<%= @data['show_pandf'] %>">
+            <input type="checkbox" name="show_pandf" id="show_pandf" <%= @data['show_pandf'] ? 'checked' : '' %>>
             <label for="pandf">Packing And Forwarding:</label>
             <input type="text" name="pandf" id="pandf" value="<%= @data['pandf'] %>">
         </div>
         <hr>
         <div>
             <label for="show_tax">Show Tax?</label>
-            <input type="checkbox" name="show_tax" id="show_tax" value="<%= @data['show_tax'] %>">
+            <input type="checkbox" name="show_tax" id="show_tax" <%= @data['show_tax'] ? 'checked' : ''%>>
             <select name="tax_value" id="tax_value" placeholder="Tax Value">
-                <option value="0">0%</option>
-                <option value="0.05">5%</option>
-                <option value="0.145">14.5%</option>
+                <%= options_for_select([['0%','0'],['5%','0.05'],['14.5%','0.145']], @data['tax_value']) %>
             </select>
         </div>
         <hr>
