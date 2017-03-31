@@ -1,14 +1,15 @@
 $(document).ready(function() {
     $(".scroll-me .sections,.see-list").bind("click", function(a) {
-        var b = $(this);
-        var temp = $(b.attr("href").replace('/',''));
+        var b = $(a.currentTarget);
+        var temp = $(b.attr("href").replace("/",""));
         if(temp.length){
-        	a.preventDefault();
-	        $("html, body").stop().animate({
-	            scrollTop: temp.offset().top + 'px'
-	        }, 1200, "easeInOutExpo");
+            a.preventDefault();
+            $("html, body").stop().animate({
+                scrollTop: temp.offset().top + "px"
+            }, 1200, "easeInOutExpo");
         }
-    }), $("#clients").length && $("#clients").owlCarousel({
+    });
+    $("#clients").length && $("#clients").owlCarousel({
         navigation: !1,
         slideSpeed: 5e3,
         paginationSpeed: 2e3,
@@ -17,7 +18,7 @@ $(document).ready(function() {
         stopOnHover: !0,
         rewindSpeed: 1e3,
         autoHeight: !1
-    })
+    });
     // $(".carousel-wrapper").length && $(".carousel-wrapper").owlCarousel({
     //     items: 1,
     //     lazyLoad: !0,
@@ -37,12 +38,37 @@ $(function() {
         $("#success").html("");
     });
     $("#submit").click(function(){
-        var t = $("input#name").val() || "Test User",
-            a = $("input#email").val() || "test@test.com",
-            r = $("input#phone").val() || "9999999999",
-            c = $("textarea#message").val() || "Test User",
-            n = t,
-            i = $("#g-recaptcha-response").val();
+        var t = $("input#name").val() || "Test User";
+        var a = $("input#email").val() || "test@test.com";
+        var r = $("input#phone").val() || "9999999999";
+        var c = $("textarea#message").val() || "Test User";
+        var n = t;
+        var i = $("#g-recaptcha-response").val();
+        var successHandler = function(a){
+            if (a){
+                $("#success").html("<div class='alert alert-success'>");
+                $("#success > .alert-success").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+                $("#success > .alert-success").append("<strong>Our Team will get back to you as soon as possible. </strong>");
+                $("#success > .alert-success").append("</div>");
+                $("#contactForm").trigger("reset");
+                grecaptcha.reset();
+            } else {
+                $("#success").html("<div class='alert alert-danger'>");
+                $("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+                $("#success > .alert-danger").append("<strong>Sorry, the captcha is wrong. Please try again!");
+                $("#success > .alert-danger").append("</div>");
+                $("#contactForm").trigger("reset");
+                grecaptcha.reset();
+            }
+        };
+        var errorHandler = function(){
+            $("#success").html("<div class='alert alert-danger'>");
+            $("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>");
+            $("#success > .alert-danger").append("<strong>Sorry " + n + ", it seems that my mail server is not responding. Please try again later!");
+            $("#success > .alert-danger").append("</div>");
+            $("#contactForm").trigger("reset");
+            grecaptcha.reset();
+        }
         $.ajax({
             url: "contact",
             type: "POST",
@@ -55,10 +81,10 @@ $(function() {
             },
             cache: !1,
             success: function(e, s, t) {
-                e.success ? ($("#success").html("<div class='alert alert-success'>"), $("#success > .alert-success").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>"), $("#success > .alert-success").append("<strong>Our Team will get back to you as soon as possible. </strong>"), $("#success > .alert-success").append("</div>"), $("#contactForm").trigger("reset")) : ($("#success").html("<div class='alert alert-danger'>"), $("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>"), $("#success > .alert-danger").append("<strong>Sorry, the captcha is wrong. Please try again!"), $("#success > .alert-danger").append("</div>"), $("#contactForm").trigger("reset"))
+                e.success ? successHandler(true) : successHandler(false);
             },
             error: function() {
-                $("#success").html("<div class='alert alert-danger'>"), $("#success > .alert-danger").html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;").append("</button>"), $("#success > .alert-danger").append("<strong>Sorry " + n + ", it seems that my mail server is not responding. Please try again later!"), $("#success > .alert-danger").append("</div>"), $("#contactForm").trigger("reset")
+                errorHandler();
             }
         });
         return false;
