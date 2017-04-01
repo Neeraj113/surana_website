@@ -5,7 +5,7 @@
                 <div class="main-section">
                     <div class="item active">
                         <a href="/">
-                            <img class="logo" itemprop="logo" width="84" height="84" src=/assets/logo.png alt="Surana Sanitations">
+                            <%= image_tag('logo.png', alt: 'Surana Sanitations', width: 84, height: 84, itemprop: 'logo', class: 'logo') %>
                             </a>
                         <div>
                             <h1><span itemprop="name">Surana Sanitations</span></h1></div>
@@ -162,7 +162,9 @@
                 <p><h4>33 YEARS OF SERVICE</h4></p>
                 <p>Since 1983, the Company has grown into a leading Retailer, Wholesaler and Stockist of wide range of Sanitary, Fittings, Bathroom Accessories, Plumbing and Spare Parts for Construction Of Houses in India. We are successfully engaged in offering a Wide Range of Products manufactured by Leading Brands in the World under One Roof.</p>
             </div>
-            <div class="col-sm-12 col-md-4 col-lg-4"><img src="/assets/success.png" width=300 alt="Surana Success Mantra"></div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <%= image_tag('success.png', alt: 'Surana Success Mantra', width: 300) %>
+            </div>
         </div>
     </div>
 </section>
