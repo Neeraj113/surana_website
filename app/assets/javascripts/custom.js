@@ -30,7 +30,7 @@ $(document).ready(function() {
     //     rewindSpeed: 2e3,
     //     paginationSpeed: 2e3,
     //     afterInit: function() {
-    //         $(".owl-wrapper-outer").append('<div class="surana-logo"><img src="/assets/img/logo.png"></div>')
+    //         $(".owl-wrapper-outer").append('<div class="surana-logo"><img src="/assets/logo.png"></div>')
     //     }
     // })
 });
