@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $('img[data-original]').each(function(){$(this).attr('src',$(this).data('original'))});
+    $('img[data-original]').each(function(){
+        $(this).attr('src',$(this).data('original')).removeAttr('data-original');
+    });
     $(".scroll-me .sections,.see-list").bind("click", function(a) {
         //A hack for home page scroll
         var b = $(a.currentTarget).attr("href").replace("/","") || "#home";
