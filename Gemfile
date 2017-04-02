@@ -25,6 +25,9 @@ gem 'bootstrap-sass'
 # To generate sitemap
 gem 'sitemap_generator'
 
+#Lazy Load Images
+gem "lazyload-rails"
+
 #For Background Jobs
 gem 'delayed_job_active_record'
 
