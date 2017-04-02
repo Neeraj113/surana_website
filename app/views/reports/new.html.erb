@@ -3,8 +3,8 @@
     'quotation' => '',
     'site' => '',
     'reference' => '',
-    'details' => [],
-    'items' => [],
+    'details' => [''],
+    'items' => [{'make' => '--'}],
     'terms' => {},
     'show_pandf' => false,
     'pandf' => '',
@@ -37,15 +37,9 @@
         </div>
         <br>
         <div id="company_details_wrapper">
-            <% if @data['details'].present? %>
-                <% @data['details'].each do |x| %>
-                    <div class="company_details">
-                        <input type="text" name="company_name" width="200" placeholder="Company Details" value="<%= x %>"/>
-                    </div>
-                <% end %>
-            <% else %>
+            <% @data['details'].each do |x| %>
                 <div class="company_details">
-                    <input type="text" name="company_name" width="200" placeholder="Company Details"/>
+                    <input type="text" name="company_name" width="200" placeholder="Company Details" value="<%= x %>"/>
                 </div>
             <% end %>
         </div>
@@ -63,48 +57,23 @@
                 </tr>
             </thead>
             <tbody id="item-container">
-            <% if @data['items'].present? %>
-                <% @data['items'].each do |x| %>
-                    <tr class="item-row">
-                        <td>
-                            <input type="text" name="comment" placeholder="Item Description" value="<%= x['comment'] %>"/>
-                        </td>
-                        <td>
-                            <input type="text" step="1" name="make" width="1" placeholder="Make" required value="<%= x['make'] %>"/>
-                        </td>
-                        <td>
-                            <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required value="<%= x['quantity'] %>"/>
-                        </td>
-                        <td>
-                            <select name="unit_measurement" required placeholder="Unit Of Measurement">
-                                <%= options_for_select([['Nos','No'],['Box','Box'],['Feet','Feet'],['Kg','Kg'],['Mtr','Mtr'],['Bag','Bag']], x['unit_measurement']) %>
-                            </select>
-                        </td>
-                        <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required value="<%= x['unit_price'] %>"/></td>
-                    </tr>
-                <% end %>
-            <% else %>
+            <% @data['items'].each do |x| %>
                 <tr class="item-row">
                     <td>
-                        <input type="text" name="comment" placeholder="Item Description" />
+                        <input type="text" name="comment" placeholder="Item Description" value="<%= x['comment'] %>"/>
                     </td>
                     <td>
-                        <input type="text" step="1" value="--" name="make" width="1" placeholder="Make" required />
+                        <input type="text" step="1" name="make" width="1" placeholder="Make" required value="<%= x['make'] %>"/>
                     </td>
                     <td>
-                        <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required />
+                        <input type="number" step="1" name="quantity" width="1" placeholder="Quantity" required value="<%= x['quantity'] %>"/>
                     </td>
                     <td>
                         <select name="unit_measurement" required placeholder="Unit Of Measurement">
-                            <option value="Nos">No</option>
-                            <option value="Box">Box</option>
-                            <option value="Feet">Feet</option>
-                            <option value="Kg">Kg</option>
-                            <option value="Mtr">Mtr</option>
-                            <option value="Bag">Bag</option>
+                            <%= options_for_select([['Nos','No'],['Box','Box'],['Feet','Feet'],['Kg','Kg'],['Mtr','Mtr'],['Bag','Bag']], x['unit_measurement']) %>
                         </select>
                     </td>
-                    <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required /></td>
+                    <td><input type="number" step="1" name="unit_price" width="1" placeholder="Unit Price" required value="<%= x['unit_price'] %>"/></td>
                 </tr>
             <% end %>
             </tbody>
