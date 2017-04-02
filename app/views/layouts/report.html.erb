@@ -37,8 +37,8 @@
         var $addDetail = $('#add-detail'),
           $removeDetail = $('#remove-detail'),
           $detailContainer = $('#company_details_wrapper'),
-          $detail = $('.company_details').first().clone();
-
+          $detail = $('.company_details').first();
+        
         $addDetail.click(function() {
           $detailContainer.append($detail.clone());
         });
@@ -52,7 +52,7 @@
         var $addItem = $('#add-item'),
           $removeItem = $('#remove-item'),
           $itemContainer = $('#item-container'),
-          $item = $('.item-row').first().clone();
+          $item = $('.item-row').first();
 
         $addItem.click(function() {
           $itemContainer.append($item.clone());
