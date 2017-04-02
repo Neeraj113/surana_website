@@ -366,7 +366,7 @@ section {
     height: 350px
 }
 #home {
-    background-image: url(/assets/3.jpg);
+    background-image: image_url('/assets/3.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
@@ -374,7 +374,7 @@ section {
 #brands,
 #brand-page,
 #products {
-    background: url('/assets/bg-body.jpg') repeat left top;
+    background: image_url('/assets/bg-body.jpg') repeat left top;
 }
 #clients .item {
     padding: 0;
@@ -484,7 +484,7 @@ section {
 .notes {
     background-attachment: fixed;
     background-color: #645862;
-    background-image: url(/assets/notes.jpg);
+    background-image: image_url('/assets/notes.jpg');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -543,11 +543,11 @@ section {
     text-align: center;
     padding-top: 70px;
     padding-bottom: 40px;
-    background: url('/assets/bg-body.jpg') repeat left top;
+    background: image_url('/assets/bg-body.jpg') repeat left top;
 }
 #brand-page .container,
 #category-page .container {
-    background: url('/assets/bg-header.png') repeat left top;
+    background: image_url('/assets/bg-header.png') repeat left top;
 }
 #about-us {
     text-align: center;
