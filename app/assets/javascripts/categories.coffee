@@ -4,7 +4,8 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui
+//= require jquery-ui/core
+//= require jquery-ui/effect
 //= require owl.carousel
 //= require bootstrap-sprockets
 //= require custom
