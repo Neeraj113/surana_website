@@ -238,9 +238,9 @@ class CategoriesController < ApplicationController
 
 	def contact
 		response = verify_google_recptcha(APP_CONFIG['recaptcha_secret_key'],params[:captcha])
-		IntroductionMailer.contact_form(params).deliver
+		IntroductionMailer.contact_form(params.as_json).deliver_later
 		if response["success"]
-			IntroductionMailer.introduction_email(params).deliver
+			IntroductionMailer.introduction_email(params.as_json).deliver_later
 			render json: response
 		else
 			render json: response

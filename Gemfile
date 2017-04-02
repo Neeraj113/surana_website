@@ -25,6 +25,9 @@ gem 'bootstrap-sass'
 # To generate sitemap
 gem 'sitemap_generator'
 
+#For Background Jobs
+gem 'delayed_job_active_record'
+
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'bcrypt'
 gem 'owlcarousel-rails'
