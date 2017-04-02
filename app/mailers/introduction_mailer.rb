@@ -1,5 +1,5 @@
 class IntroductionMailer < ApplicationMailer
-	default from: "suranasanitations@gmail.com"
+	default from: "Surana Sanitations <suranasanitations@gmail.com>"
 
 	# Send Mail To Customer, thanking him to contact us and we will get back to him soon.
 	def introduction_email(user)
