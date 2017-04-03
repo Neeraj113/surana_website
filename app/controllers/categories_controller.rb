@@ -201,6 +201,13 @@ class CategoriesController < ApplicationController
 		                description: "Jaquar, Cera Brands | Shower Panels | Surana Sanitations | Visakhapatnam"
 	end
 
+	def steam_solutions
+		prepare_meta_tags title: "Steam Solutions",
+		                image: "http://ssbathstudio.com/assets/logo.png",
+		                keywords: "steam solutions, Jaquar steam solutions, Cera steam solutions, bath steam solutions, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera",
+		                description: "Jaquar, Cera Brands | Steam Solutions | Surana Sanitations | Visakhapatnam"
+	end
+
 	def swr_pipes_and_fittings
 		prepare_meta_tags title: "SWR Pipes And Fittings",
 		                image: "http://ssbathstudio.com/assets/logo.png",
