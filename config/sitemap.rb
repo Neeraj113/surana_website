@@ -25,6 +25,7 @@ SitemapGenerator::Sitemap.create do
   add '/sanitaryware', :changefreq => 'daily', :priority => 0.9
   add '/shower-enclosures', :changefreq => 'daily', :priority => 0.9
   add '/shower-panels', :changefreq => 'daily', :priority => 0.9
+  add '/shower-enclosures', :changefreq => 'daily', :priority => 0.9
   add '/swr-pipes-and-fittings', :changefreq => 'daily', :priority => 0.9
   add '/tiles', :changefreq => 'daily', :priority => 0.9
   add '/upvc-pipes-and-fittings', :changefreq => 'daily', :priority => 0.9
