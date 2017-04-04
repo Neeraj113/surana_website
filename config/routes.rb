@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # Category Pages Route
   root :to                                => "categories#index"
+  get '/index.html'                       => redirect('/')
   get '/about-us.html'                    => redirect('/about-us')
   get '/about-us'                         => 'categories#about_us'
   get '/bathroom-accessories.html'        => redirect('/bathroom-accessories')
