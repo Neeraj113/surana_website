@@ -35,27 +35,27 @@
             <div id=clients class="owl-carousel owl-theme">
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
                     <a href="http://astralpipes.com/" rel="nofollow" target="_blank" title="Astral Pipes & Fittings" itemprop="url">
-                        <%= image_tag('company-logos/astral.jpg', alt: 'Astral', class: 'company_logo', itemprop: 'logo') %>
+                        <%= image_tag('company-logos/astral.jpg', alt: 'Astral', class: 'company_logo', itemprop: 'logo', lazy: true) %>
                     </a>
                 </div>
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
                     <a href="https://www.cera-india.com/" rel="nofollow" title="CERA Sanitaryware & Fittings" target="_blank" itemprop="url">
-                        <%= image_tag('company-logos/cera.jpg', alt: 'Cera', class: 'company_logo', itemprop: 'logo') %>
+                        <%= image_tag('company-logos/cera.jpg', alt: 'Cera', class: 'company_logo', itemprop: 'logo', lazy: true) %>
                     </a>
                 </div>
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
                     <a href="http://www.jaquar.com/" rel="nofollow" title="Jaquar Sanitaryware & Bath Fittings" target="_blank" itemprop="url">
-                        <%= image_tag('company-logos/jaquar.jpg', alt: 'Jaquar', class: 'company_logo', itemprop: 'logo') %>
+                        <%= image_tag('company-logos/jaquar.jpg', alt: 'Jaquar', class: 'company_logo', itemprop: 'logo', lazy: true) %>
                     </a>
                 </div>
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
                     <a href="http://www.kisangroup.com/" rel="nofollow" title="Kisan Pipes & Fittings" target="_blank" itemprop="url">
-                        <%= image_tag('company-logos/kisan.jpg', alt: 'Kisan', class: 'company_logo', itemprop: 'logo') %>
+                        <%= image_tag('company-logos/kisan.jpg', alt: 'Kisan', class: 'company_logo', itemprop: 'logo', lazy: true) %>
                     </a>
                 </div>
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
                     <a href="http://niralisinks.com/" rel="nofollow" title="Nirali Sinks" target="_blank" itemprop="url">
-                        <%= image_tag('company-logos/nirali.jpg', alt: 'Nirali', class: 'company_logo', itemprop: 'logo') %>
+                        <%= image_tag('company-logos/nirali.jpg', alt: 'Nirali', class: 'company_logo', itemprop: 'logo', lazy: true) %>
                     </a>
                 </div>
                 <div class=item itemprop="brand" itemscope itemtype="http://schema.org/brand">
@@ -181,6 +181,78 @@
         <div class=row id=starts>
             <div class="col-md-12 col-sm-12 col-xs-12 work-list">
                 <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Water Heater" href=/water-heater>
+                        <div class=featured-img>
+                            <%= image_tag('products/water-heater.jpg', alt: 'Water Heater', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
+                        </div>
+                        <h3>Water Heater</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Kitchen Sinks" href=/kitchen-sinks>
+                        <div class=featured-img>
+                            <%= image_tag('products/sink.jpg', alt: 'Kitchen Sinks', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Nirali</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jayna</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Chandini</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Prayag</span></div>
+                        </div>
+                        <h3>Kitchen Sinks</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Water Tanks" href=/water-tank>
+                        <div class=featured-img>
+                            <%= image_tag('products/water-tank.jpg', alt: 'Water Tank', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Sintex</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Reno</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Renotuf</span></div>
+                        </div>
+                        <h3>Water Tanks</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Shower Enclosures" href=/shower-enclosures>
+                        <div class=featured-img>
+                            <%= image_tag('products/shower-enclosure.jpg', alt: 'Shower Enclosures', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
+                        </div>
+                        <h3>Shower Enclosures</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Shower Panel" href=/shower-panels>
+                        <div class=featured-img>
+                            <%= image_tag('products/shower-panel.jpg', alt: 'Shower Panel', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Cera</span></div>
+                        </div>
+                        <h3>Shower Panel</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
+                    <a title="Steam Solutions" href=/steam-solutions>
+                        <div class=featured-img>
+                            <%= image_tag('products/steam-solutions.jpeg', alt: 'Steam Solutions', lazy: true) %>
+                        </div>
+                        <div class=image-hover>
+                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
+                        </div>
+                        <h3>Steam Solutions</h3>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
                     <a title="Bathroom Faucets" href=/bathroom-fittings>
                         <div class=featured-img>
                             <%= image_tag('products/bath-fittings.jpg', alt: 'Bath Fittings', lazy: true) %>
@@ -220,44 +292,6 @@
                             <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Parryware</span></div>
                         </div>
                         <h3>Sanitaryware</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Water Heater" href=/water-heater>
-                        <div class=featured-img>
-                            <%= image_tag('products/water-heater.jpg', alt: 'Water Heater', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
-                        </div>
-                        <h3>Water Heater</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Kitchen Sinks" href=/kitchen-sinks>
-                        <div class=featured-img>
-                            <%= image_tag('products/sink.jpg', alt: 'Kitchen Sinks', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Nirali</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jayna</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Chandini</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Prayag</span></div>
-                        </div>
-                        <h3>Kitchen Sinks</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Water Tanks" href=/water-tank>
-                        <div class=featured-img>
-                            <%= image_tag('products/water-tank.jpg', alt: 'Water Tank', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Sintex</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Reno</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Renotuf</span></div>
-                        </div>
-                        <h3>Water Tanks</h3>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
@@ -402,40 +436,6 @@
                             <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Kajaria</span></div>
                         </div>
                         <h3>Tiles & Grout</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Shower Enclosures" href=/shower-enclosures>
-                        <div class=featured-img>
-                            <%= image_tag('products/shower-enclosure.jpg', alt: 'Shower Enclosures', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
-                        </div>
-                        <h3>Shower Enclosures</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Shower Panel" href=/shower-panels>
-                        <div class=featured-img>
-                            <%= image_tag('products/shower-panel.jpg', alt: 'Shower Panel', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Cera</span></div>
-                        </div>
-                        <h3>Shower Panel</h3>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
-                    <a title="Steam Solutions" href=/steam-solutions>
-                        <div class=featured-img>
-                            <%= image_tag('products/steam-solutions.jpeg', alt: 'Steam Solutions', lazy: true) %>
-                        </div>
-                        <div class=image-hover>
-                            <div class="brand" itemprop="brand" itemscope itemtype="http://schema.org/brand"><span itemprop="name">Jaquar</span></div>
-                        </div>
-                        <h3>Steam Solutions</h3>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 work-space clearfix">
