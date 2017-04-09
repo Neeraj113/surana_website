@@ -26,6 +26,9 @@ Rails.application.configure do
   config.assets.compile = true
   config.serve_static_assets = true
 
+  GA.tracker = "UA-79751485-1"
+  GA.script_source = :doubleclick
+
   config.public_file_server.headers = {
     'Cache-Control' => 'public, s-maxage=31536000, maxage=15552000',
     'Expires' => "#{1.year.from_now.to_formatted_s(:rfc822)}"
