@@ -68,7 +68,10 @@ Rails.application.routes.draw do
   get '/users'                            => 'users#index'
   get '/users/:id'                        => 'users#show', :as => 'user'
 
+  get '/reports'                          => 'reports#index', :as => 'reports'
   get '/reports/new'                      => 'reports#new', :as => 'generate_report'
   post '/reports/create'                  => 'reports#create'
   get '/reports/show'                     => 'reports#show'
+  get '/reports/:id'                      => 'reports#show', :as => 'report'
+  delete '/reports/:id'                   => 'reports#destroy'
 end

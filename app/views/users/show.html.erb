@@ -13,4 +13,5 @@
   <div>Email: <b><%= @user.email %></b></div>
   <div>Access: <b><%= @user.has_permit ? 'Granted :)' : 'Denied :(' %></b></div>
   <p><%= link_to "Generate Report Now!", generate_report_url %></p>
+  <p><%= link_to "Check Reports!", reports_url %></p>
 </div>
