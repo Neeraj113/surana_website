@@ -5,7 +5,7 @@
     <% if @data['quotation'].present? %>
       <b style="text-decoration: underline;">Quotation</b><b>: <%= @data['quotation'] %></b>
     <% end %>
-    <span style="float: right;">Date: <%= Time.now.strftime("%D") %></span></div>
+    <span style="float: right;">Date: <%= Time.now.strftime("%d/%m/%y") %></span></div>
     <% if @data['details'] && @data['details'].length > 0 %>
       <h4>
         To,
