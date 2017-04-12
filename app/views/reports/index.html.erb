@@ -4,6 +4,8 @@
 		<tr>
 			<th>Quote No</th>
 			<th>Project Site</th>
+			<th>Reference</th>
+			<th>Company Details</th>
 			<th>Edit Report</th>
 			<th>Show Report</th>
 			<th>Delete Report</th>
@@ -11,9 +13,12 @@
 	</thead>
 	<tbody>
 		<% @reports.each do |report| %>
+			<% temp = JSON.parse(Base64.decode64(report.report_code)) %>
 			<tr>
 				<td><%= report.quote_no %></td>
 				<td><%= report.project_site %></td>
+				<td><%= temp["reference"] %></td>
+				<td><%= temp['details'].to_a.join("<br>").html_safe %></td>
 				<td><a href="/reports/new?data=<%= report.report_code %>" target="_blank">Edit Report</a></td>
 				<td><a href="/reports/show?data=<%= report.report_code %>" target="_blank">Show Report</a></td>
 				<td><%= link_to 'Destroy', report_path(report),
