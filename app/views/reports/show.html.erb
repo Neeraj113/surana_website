@@ -3,7 +3,7 @@
   <div>
     <div class="text-center clearfix">
     <% if @data['quotation'].present? %>
-      <b style="text-decoration: underline;">Quotation</b><b>: <%= @data['quotation'] %></b>
+      <strong style="text-decoration: underline;">Quotation</strong><strong>: <%= @data['quotation'] %></strong>
     <% end %>
     <span style="float: right;">Date: <%= Time.now.strftime("%d/%m/%y") %></span></div>
     <% if @data['details'] && @data['details'].length > 0 %>
@@ -24,7 +24,7 @@
     <br>
     <div>Dear Sir,</div>
     <% if @data['reference'].present? %>
-      <div style="font-size: 16px; margin: 0 70px 10px;"><b style="text-decoration: underline;">Reference:</b><span>  <%= @data['reference'] %></span></div>
+      <div style="font-size: 16px; margin: 0 70px 10px;"><strong style="text-decoration: underline;">Reference:</strong><span>  <%= @data['reference'] %></span></div>
     <% end %>
     <div style="margin-left:30px">We are pleased to quote as below:</div>
     <br>
@@ -59,31 +59,31 @@
           <% end %>
           <% if @data['show_pandf'].present? || @data['show_tax'].present? %>
             <tr>
-              <td class="text-right" colspan="6"><b>Total</b></td>
-              <td class="text-center"><b><%= grand_total %></b></td>
+              <td class="text-right" colspan="6"><strong>Total</strong></td>
+              <td class="text-center"><strong><%= grand_total %></strong></td>
             </tr>
             <% if @data['show_tax'].present? %>
               <tr>
-                <td class="text-right" colspan="6"><b>Taxes</b></td>
-                <td class="text-center"><b><%= (grand_total*@data['tax_value'].to_f).round %></b></td>
+                <td class="text-right" colspan="6"><strong>Taxes</strong></td>
+                <td class="text-center"><strong><%= (grand_total*@data['tax_value'].to_f).round %></strong></td>
               </tr>
             <% end %>
             <% if @data['show_pandf'].present? %>
               <tr>
-                <td class="text-right" colspan="6"><b>Packing And Forwarding:</b></td>
-                <td class="text-center"><b><%= @data['pandf'].to_i %></b></td>
+                <td class="text-right" colspan="6"><strong>Packing And Forwarding:</strong></td>
+                <td class="text-center"><strong><%= @data['pandf'].to_i %></strong></td>
               </tr>
             <% end %>
             <% final_v1 = @data['show_tax'].present? ? (grand_total + (grand_total*@data['tax_value'].to_f).round) : grand_total %>
             <% final_v1 += @data['show_pandf'].present? ? @data['pandf'].to_i : 0 %>
             <tr>
-              <td class="text-right" colspan="6"><b>Grand Total</b></td>
-              <td class="text-center"><b><%= final_v1 %></b></td>
+              <td class="text-right" colspan="6"><strong>Grand Total</strong></td>
+              <td class="text-center"><strong><%= final_v1 %></strong></td>
             </tr>
           <% else %>
             <tr>
-              <td class="text-right" colspan="6"><b>Grand Total</b></td>
-              <td class="text-center"><b><%= grand_total %></b></td>
+              <td class="text-right" colspan="6"><strong>Grand Total</strong></td>
+              <td class="text-center"><strong><%= grand_total %></strong></td>
             </tr>
           <% end %>
         </tbody>
@@ -91,22 +91,22 @@
     <% end %>
     <br>
     <br>
-    <div><b style="text-decoration: underline;">Terms and Conditions</b><b>:</b></div>
+    <div><strong style="text-decoration: underline;">Terms and Conditions</strong><strong>:</strong></div>
     <ol style="padding-left: 20px;">
       <% if @data['terms']['price'].present? %>
-        <li style="list-style-type: disc;"><b>Prices:-</b> <%= @data['terms']['price'] %></li>
+        <li style="list-style-type: disc;"><strong>Prices:-</strong> <%= @data['terms']['price'] %></li>
       <% end %>
       <% if @data['terms']['tax'].present? %>
-        <li style="list-style-type: disc;"><b>Taxes:-</b> <%= @data['terms']['tax'] %></li>
+        <li style="list-style-type: disc;"><strong>Taxes:-</strong> <%= @data['terms']['tax'] %></li>
       <% end %>
       <% if @data['terms']['delivery'].present? %>
-        <li style="list-style-type: disc;"><b>Delivery:-</b> <%= @data['terms']['delivery'] %></li>
+        <li style="list-style-type: disc;"><strong>Delivery:-</strong> <%= @data['terms']['delivery'] %></li>
       <% end %>
       <% if @data['terms']['validity'].present? %>
-        <li style="list-style-type: disc;"><b>Validity:-</b> <%= @data['terms']['validity'] %></li>
+        <li style="list-style-type: disc;"><strong>Validity:-</strong> <%= @data['terms']['validity'] %></li>
       <% end %>
       <% if @data['terms']['payment'].present? %>
-        <li style="list-style-type: disc;"><b>Payment:-</b> <%= @data['terms']['payment'] %></li>
+        <li style="list-style-type: disc;"><strong>Payment:-</strong> <%= @data['terms']['payment'] %></li>
       <% end %>
     </ol>
     <div class="text-right">Yours Faithfully,</div>
