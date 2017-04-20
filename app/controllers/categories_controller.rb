@@ -61,7 +61,7 @@ class CategoriesController < ApplicationController
 	end
 
 	def index
-		prepare_meta_tags title: "Tiles, Sanitaryware, Pipes, Bathroom Fittings",
+		prepare_meta_tags title: "Tiles, Sanitaryware, Pipes, Bathroom Fittings, Accessories",
 		                image: "http://ssbathstudio.com/assets/logo.png",
 		                keywords: "sanitaryware, plumbing, accessories, mirror, faucets, sinks, water tank, pvc, upvc, cpvc, swr, gi, ci, pipes, fittings, bathtub, tiles, shower panel, geyser, shower encloser, manhole cover, water heater, dealer, dealers, distributor, distributors, vizag, visakhapatnam, jaquar, cera, johson, sudhakar, prince, astral, ashirvad, prayag, nirali, jayna, laticrete, chandini, shakti, kisan, swastika, pic, ardex, endura, parryware, seiko, polytuf, sintex, xen, surana, sanitations, bath fittings, bath, kitchen, brass valve, ptmt fittings",
 		                description: "House Of Tiles, CP Fittings, Sanitaryware & Plumbing Items",
