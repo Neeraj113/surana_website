@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang=en class=no-js>
 
-<head>
-    <%= display_meta_tags %>
-    <meta charset=utf-8 />
-    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name=author content="Surana Sanitations" />
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    <link rel="dns-prefetch" href="//maps.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google.com">
-    <link rel="dns-prefetch" href="//maps.gstatic.com">
-    <!--[if IE]><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><![endif]-->
-    <% if @category_name %>
-        <title><%= @category_name %> | Surana Sanitations</title>
-    <% else %>
-        <title>Surana Sanitations | Tiles, Sanitaryware, Pipes, Bathroom Fittings</title>
-    <% end %>
-    <link rel="alternate" href="http://ssbathstudio.com" hreflang="en-in" />
-    <link rel="author" href="https://plus.google.com/+SuranaSanitations" title="Surana Sanitations" />
-    <link href=/assets/logo.png type=image/png rel='apple-touch-icon' />
-    <link rel=icon href=/assets/favicon_16.png type=image/png sizes="16x16" />
-    <link rel=icon href=/assets/favicon_32.png type=image/png sizes="32x32" />
-    <link rel=canonical href="<%= url_for(:only_path => false) %>" />
-    <meta itemprop=image content="http://ssbathstudio.com/assets/logo.png" />
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
-    <meta name="reply-to" content="&#x73;&#x75;&#x72;&#x61;&#x6E;&#x61;&#x73;&#x61;&#x6E;&#x69;&#x74;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;">
-    <%= csrf_meta_tags %>
+    <head>
+        <%= display_meta_tags %>
+        <meta charset=utf-8 />
+        <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name=author content="Surana Sanitations" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com">
+        <link rel="dns-prefetch" href="//maps.googleapis.com">
+        <link rel="dns-prefetch" href="//www.google.com">
+        <link rel="dns-prefetch" href="//maps.gstatic.com">
+        <!--[if IE]><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><![endif]-->
+        <% if @category_name %>
+            <title><%= @category_name %> | Surana Sanitations</title>
+        <% else %>
+            <title>Surana Sanitations | Tiles, Sanitaryware, Pipes, Bathroom Fittings</title>
+        <% end %>
+        <link rel="alternate" href="http://ssbathstudio.com" hreflang="en-in" />
+        <link rel="author" href="https://plus.google.com/+SuranaSanitations" title="Surana Sanitations" />
+        <link href=/assets/logo.png type=image/png rel='apple-touch-icon' />
+        <link rel=icon href=/assets/favicon_16.png type=image/png sizes="16x16" />
+        <link rel=icon href=/assets/favicon_32.png type=image/png sizes="32x32" />
+        <link rel=canonical href="<%= url_for(:only_path => false) %>" />
+        <meta itemprop=image content="http://ssbathstudio.com/assets/logo.png" />
+        <meta name="distribution" content="global">
+        <meta name="rating" content="general">
+        <meta name="reply-to" content="&#x73;&#x75;&#x72;&#x61;&#x6E;&#x61;&#x73;&#x61;&#x6E;&#x69;&#x74;&#x61;&#x74;&#x69;&#x6F;&#x6E;&#x73;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;">
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body data-spy=scroll data-target=#menu-section itemscope itemtype="http://schema.org/Store">
-        <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id=menu-section>
+        <header class="navbar navbar-inverse navbar-fixed-top scroll-me" id=menu-section>
             <div class=container>
                 <div class=navbar-header>
                     <button type=button class=navbar-toggle data-toggle=collapse data-target=.navbar-collapse><span class=icon-bar></span><span class=icon-bar></span><span class=icon-bar></span></button><a class=navbar-brand itemprop="name" href=/>Surana Sanitations</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <nav class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class=sections href=/ itemprop=url>HOME</a></li>
                         <li><a class=sections href=/#brands>BRANDS</a></li>
@@ -45,17 +45,17 @@
                         <li><a class=sections href=/#contact>CONTACT</a></li>
                         <li><a class=sections href=about-us>ABOUT US</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
-        </div>
+        </header>
         <article>
             <%= yield %>
         </article>
-        <nav id="footer">
+        <footer id="footer">
             <div class="container">
                 <div class="pull-left fnav">
                     <p>ALL RIGHTS RESERVED. COPYRIGHT © 2016-2017.</div>
-                <div class="pull-right fnav">
+                <nav class="pull-right fnav">
                     <ul class="footer-social">
                         <li>
                             <a href=https://www.justdial.com/Visakhapatnam/Surana-Sanitations-Suryabagh/0891PX891-X891-160614135448-Q7L5_BZDET?xid=VmlzYWtoYXBhdG5hbSBTdXJhbmEgU2FuaXRhdGlvbnMgT3Bwb3NpdGUgS2FseWFuaSBQcmVzcyBTdXJ5YWJhZ2g= itemprop="sameAs" target=_blank>
@@ -72,17 +72,17 @@
                         <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
                         <li><a href="https://twitter.com/suranasanitary" itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
-        </nav>
-        <div id="controls">
+        </footer>
+        <aside id="controls">
             <ul>
                 <li><a href=https://www.facebook.com/suranasanitations itemprop="sameAs" target=_blank><i class="fa fa-facebook"></i></a></li>
                 <li><a href=https://www.youtube.com/c/SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-youtube-play"></i></a></li>
                 <li><a href=https://twitter.com/suranasanitary itemprop="sameAs" target=_blank><i class="fa fa-twitter"></i></a></li>
                 <li><a href=https://plus.google.com/+SuranaSanitations itemprop="sameAs" target=_blank><i class="fa fa-google-plus"></i></a></li>
             </ul>
-        </div>
+        </aside>
         <%= javascript_include_tag 'categories', 'data-turbolinks-track': 'reload' %>
         
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&hl=en&render=explicit" async defer></script>
