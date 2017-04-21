@@ -418,7 +418,7 @@ section {
     width: 100%
 }
 .image-hover {
-    animation: 0.4s ease-in 0s normal none 1 running imagehover;
+    animation: 0.2s ease-in imagehover;
     display: none;
     top: 0;
     left: 15px;
@@ -456,15 +456,7 @@ section {
     0% {
         height: 40px
     }
-    25% {
-        height: 80px
-    }
-    50% {
-        height: 120px
-    }
-    75% {
-        height: 160px
-    }
+    
     100% {
         height: 200px
     }
@@ -474,8 +466,7 @@ section {
     color: #212a3f
 }
 .work-list a:hover .image-hover {
-    display: block;
-    animation: .4s ease-in 0 normal none 1 running imagehover
+    display: block
 }
 #clients .company_logo {
     max-width: 178px;
