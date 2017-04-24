@@ -89,7 +89,9 @@
         </tbody>
       </table>
     <% end %>
-    <br>
+    <% if @data['show_note'].present? %>
+      <div><strong>Note:</strong> <%= @data['note'] %></div>
+    <% end %>
     <br>
     <div><strong style="text-decoration: underline;">Terms and Conditions</strong><strong>:</strong></div>
     <ol style="padding-left: 20px;">

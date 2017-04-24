@@ -83,6 +83,13 @@
         <input class="btn btn-default" type="button" id="remove-item" name="remove-item" value="Remove Item" />
         <hr>
         <div>
+            <label for="show_note">Show Note?</label>
+            <input type="checkbox" name="show_note" id="show_note" <%= @data['show_note'] ? 'checked' : '' %>
+            <label for="note">Note:</label>
+            <input type="text" name="note" id="note" value="<%= @data['note'] %>">
+        </div>
+        <hr>
+        <div>
             <label for="show_pandf">Show P & F?</label>
             <input type="checkbox" name="show_pandf" id="show_pandf" <%= @data['show_pandf'] ? 'checked' : '' %>>
             <label for="pandf">Packing And Forwarding:</label>
