@@ -27,6 +27,8 @@ gem 'sitemap_generator'
 
 gem 'to_words'
 
+gem 'thin'
+
 #Lazy Load Images
 gem "lazyload-rails"
 
