@@ -43,10 +43,12 @@
         </thead>
         <tbody>
           <% grand_total = 0 %>
+          <% final_v1 = 0 %>
           <% total = 0 %>
           <% @data['items'].each_with_index do |k,v| %>
             <% total = k['quantity'].to_i*k['unit_price'].to_i %>
             <% grand_total = grand_total + total %>
+            <% final_v1 = grand_total %>
             <tr>
               <td class="text-center"><%= v.to_i + 1 %> )</td>
               <td><%= k['comment'] %></td>
@@ -54,36 +56,36 @@
               <td class="text-center"><%= k['quantity'] %></td>
               <td class="text-center"><%= k['unit_measurement'] %></td>
               <td class="text-center"><%= k['unit_price'] %></td>
-              <td class="text-center"><%= total %></td>
+              <td class="text-center"><%= total.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></td>
             </tr>
           <% end %>
           <% if @data['show_pandf'].present? || @data['show_tax'].present? %>
             <tr>
               <td class="text-right" colspan="6"><strong>Total</strong></td>
-              <td class="text-center"><strong><%= grand_total %></strong></td>
+              <td class="text-center"><strong><%= grand_total.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></strong></td>
             </tr>
             <% if @data['show_tax'].present? %>
               <tr>
                 <td class="text-right" colspan="6"><strong>Taxes</strong></td>
-                <td class="text-center"><strong><%= (grand_total*@data['tax_value'].to_f).round %></strong></td>
+                <td class="text-center"><strong><%= (grand_total*@data['tax_value'].to_f).round.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></strong></td>
               </tr>
             <% end %>
             <% if @data['show_pandf'].present? %>
               <tr>
                 <td class="text-right" colspan="6"><strong>Packing And Forwarding:</strong></td>
-                <td class="text-center"><strong><%= @data['pandf'].to_i %></strong></td>
+                <td class="text-center"><strong><%= @data['pandf'].to_i.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></strong></td>
               </tr>
             <% end %>
             <% final_v1 = @data['show_tax'].present? ? (grand_total + (grand_total*@data['tax_value'].to_f).round) : grand_total %>
             <% final_v1 += @data['show_pandf'].present? ? @data['pandf'].to_i : 0 %>
             <tr>
               <td class="text-right" colspan="6"><strong>Grand Total</strong></td>
-              <td class="text-center"><strong><%= final_v1 %></strong></td>
+              <td class="text-center"><strong><%= final_v1.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></strong></td>
             </tr>
           <% else %>
             <tr>
               <td class="text-right" colspan="6"><strong>Grand Total</strong></td>
-              <td class="text-center"><strong><%= grand_total %></strong></td>
+              <td class="text-center"><strong><%= grand_total.to_s.gsub(/(\d+?)(?=(\d\d)+(\d)(?!\d))(\.\d+)?/, "\\1,") %></strong></td>
             </tr>
           <% end %>
         </tbody>

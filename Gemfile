@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 # To generate sitemap
 gem 'sitemap_generator'
 
+gem 'to_words'
+
 #Lazy Load Images
 gem "lazyload-rails"
 
