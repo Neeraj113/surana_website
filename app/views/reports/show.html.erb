@@ -3,16 +3,27 @@
   <div>
     <div class="text-center clearfix">
     <% if @data['quotation'].present? %>
-      <strong style="text-decoration: underline;">Quotation</strong><strong>: <%= @data['quotation'] %></strong>
+      <% if @data['is_performa'].present? %>
+        <strong style="text-decoration: underline;"><%= @data['quotation'] %></strong>
+      <% else %>
+        <strong style="text-decoration: underline;">Quotation</strong><strong>: <%= @data['quotation'] %></strong>
+      <% end %>
     <% end %>
     <span style="float: right;">Date: <%= Time.now.strftime("%d/%m/%y") %></span></div>
     <% if @data['details'] && @data['details'].length > 0 %>
-      <h4>
-        To,
+        <% if @data['is_performa'].present? %>
+          <h5>
+            M/S,
+          </h5>
+        <% else %>
+          <h4>
+            To,
+          </h4>
+        <% end %>
       </h4>
       <% @data['details'].each do |x| %>
         <h5 style="margin: 2px 0; font-size: 16px;">
-          <%= x %>
+          &nbsp;<%= x %>
         </h5>
       <% end %>
     <% end %>
@@ -22,12 +33,15 @@
       </h5>
     <% end %>
     <br>
-    <div>Dear Sir,</div>
-    <% if @data['reference'].present? %>
-      <div style="font-size: 16px; margin: 0 70px 10px;"><strong style="text-decoration: underline;">Reference:</strong><span>  <%= @data['reference'] %></span></div>
+    <% if @data['is_performa'].present? %>
+    <% else %>
+      <div>Dear Sir,</div>
+      <% if @data['reference'].present? %>
+        <div style="font-size: 16px; margin: 0 70px 10px;"><strong style="text-decoration: underline;">Reference:</strong><span>  <%= @data['reference'] %></span></div>
+      <% end %>
+      <div style="margin-left:30px">We are pleased to quote as below:</div>
+      <br>
     <% end %>
-    <div style="margin-left:30px">We are pleased to quote as below:</div>
-    <br>
     <% if @data['items'] && @data['items'].length > 0 %>
       <table class="table table-bordered table-striped table-condensed">
         <thead>
@@ -91,8 +105,9 @@
         </tbody>
       </table>
     <% end %>
+    <div><strong style="text-decoration: underline;">Amount In Words</strong>: <%= final_v1.to_i.to_words.humanize %> only.</div>
     <% if @data['show_note'].present? %>
-      <div><strong>Note:</strong> <%= @data['note'] %></div>
+      <div><strong style="text-decoration: underline;">Note:</strong> <%= @data['note'] %></div>
     <% end %>
     <br>
     <div><strong style="text-decoration: underline;">Terms and Conditions</strong><strong>:</strong></div>
@@ -117,6 +132,11 @@
     <div class="text-right">Gaurav Surana</div>
     <div class="text-right">+91-9849156450</div>
     <br>
-    <div class="text-center"><h5 class="divFooter">This is a system generated quotation, no signature is required.</h5></div>
+    <div class="text-center">
+      <h5 class="divFooter">
+      This is a system generated 
+      <%= @data['is_performa'].present? ? 'performa' : 'quotation' %>, no signature is required.
+      </h5>
+    </div>
   </div>
 </div>

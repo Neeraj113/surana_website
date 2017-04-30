@@ -22,7 +22,7 @@
     <form id="quotation-rows">
         <h5>Add Company Details</h5>
         <div>
-            <label for="quotation">Quotation:</label>
+            <label for="quotation">Quotation/Performa:</label>
             <input type="text" name="quotation" id="quotation" value="<%= @data['quotation'] %>">
         </div>
         <br>
@@ -127,6 +127,11 @@
             </div>
         </div>
         <br>
+        <hr>
+        <div>
+            <label for="is_performa">Is Performa?</label>
+            <input type="checkbox" name="is_performa" id="is_performa" <%= @data['is_performa'] ? 'checked' : '' %>
+        </div>
         <hr>
         <input type="button" id="create-quotation" name="create-quotation" value="Create Quotation">
     </form>​
